@@ -1,0 +1,36 @@
+opinion_modifiers文件夹是一个用来专门储存HOI4所有国家外交状况的文件夹
+其路径在于Hearts of Iron IV/common/opinion_modifiers/*.txt
+
+首先，作为“前端”，即代码效果，格式是如此
+
+以国策为例（以SPR增加与SOV好感为例为例）
+
+令 tag = SOV
+completion_reward = {
+	SPR = {
+		add_opinion_modifier = {
+			target = ROOT  #ROOT作用域，这里指苏联。还记得它嘛，如果忘记了去看看在高级代码里面的“关于作用域一些小东西”
+			modifier = SOV_SPR_opinion_modifier ##这个便是modifier ，左右好感度的东西，定义在opinion_modifiers文件夹
+		}
+	}
+}
+
+其次，在后端（opinion_modifiers文件夹），即modifier储存位置，格式是如此
+#其路径在于Hearts of Iron IV/common/opinion_modifiers/*.txt（再次强调！）
+
+
+opinion_modifiers = {
+
+	[name] = { #名字随便填
+		value = ±xx ###＋号是增加好感度（友善），-号是减少好感度（厌恶）
+
+		decay = ±xx ###该代码表设计每月外交好感度随时间变化的值，＋号为每月外交好感度增加的值，－号是每月外交好感度减少的值
+
+		trade = yes/no  ###代表是否能与目标国家进行贸易
+
+		max_trust = ±xxx ##指一国对另外一国外交好感度最大能到多少，±表示好感度具体的值，一般是先到达max_trust的值之后，再使用decay对当前外交值进行加减
+		min_trust = ±xxx ##指一国对另外一国外交好感度最小能到多少，±表示好感度具体的值，一般是先到达min_trust的值之后，再使用decay对当前外交值进行加减
+
+		#months/years/days = timer（时间） ##具体意思不大清楚，貌似是具有计时器作用，外交态势的值到一定时间后会消失
+	}
+}

@@ -1,0 +1,64 @@
+决议分类txt文件位置common/decisions/categories/xxx_decision_category.txt
+XX_decision_category（决议分类） = {
+	icon = 图标名
+	picture = 图片名
+	allowed/available/visible = {
+		条件
+	}
+	priority = 优先度，与其他决议分类相比越高则越靠上端
+}
+
+
+单个决议txt文件位置common/decisions/xxx.txt
+XXX_decision_category（决议分类） = {
+	XX（单个决议） = {
+		
+		icon = 图标名
+		
+		cost = 消耗的pp点
+		days_remove = 需要的天数
+		
+		fire_only_once = 是否只可点/触发一次
+		days_re_enable = 几天之后可以再点
+
+		allowed/available/visible = {
+			条件
+		}
+		ai_will_do = {
+			factor = X
+			modifier = {
+				add/factor = X
+				条件
+			}
+		}
+		modifier = {
+			决议正在进行时候的修正（天数为days_remove设定的数）
+	   	}
+		complete_effect = {  
+			开始/点击决议时的效果
+		}
+		remove_effect = {
+			决议完成/结束时的效果
+		}
+	}
+	
+
+	xx（任务模板） = {     
+		activation = {                         
+			触发任务的条件（满足这个条件就开始任务）
+		}                                    
+		available = {                           
+			完成任务的条件
+		}
+		
+		is_good = yes/no（决定任务进度条的颜色）                         
+	
+		days_mission_timeout = 任务时限天数
+		timeout_effect = {                      
+			超时未完成任务的效果          
+		}
+		complete_effect = {                    
+			任务完成（满足上方available条件）的效果          
+		}
+	}
+}

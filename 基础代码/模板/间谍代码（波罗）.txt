@@ -1,0 +1,159 @@
+#制作者 波罗
+#创建特工
+create_operative_leader = { #在国策事件效果中创建一个特工
+	name = "Ramón Mercader" #名字
+	GFX = GFX_portrait_SOV_ramon_mercader #图片
+	traits = { operative_tough operative_infiltrator } #特质
+	portrait_tag_override = GER #肖像是哪个国家的，没太大用
+	bypass_recruitment = no #是否将该特工直接添加到可用特工列表中
+	available_to_spy_master = yes #特工是否可以被阵营的间谍主管招募
+	nationalities = { SOV SPR MEX } #拥有国籍
+}
+
+
+#创建情报机构图标，路径common\intelligence_agencies，命名格式名称_intelligence_agencies
+intelligence_agency = { #不可更改，名字在下面的name
+	picture = GFX_intelligence_agency_logo_usa #图片
+	names = { "Office of Strategic Services" } #该国家默认情报机构名
+	
+	default = { tag = USA } #当满足这个条件时为默认选项
+	available = { original_tag = USA } #出现满足的条件
+}
+
+
+#自定义特工特质，路径common\unit_leader，命名格式xxx_traits，在p社里和将领特质在一个文件
+operative_xxxx = { #xxxx是名字随意填，特质名字在本地化里本地化
+	type = operative
+	trait_type = basic_trait
+	#分为基本特质basic_trait、性格特质personality_trait。好像大概也许没有区别
+	new_commander_weight = { #新间谍在招募时有这个特质的概率
+		base = 1
+	}
+	cost = 400 #不知道有啥意义，随便写吧（可能是学习该特质的经验花费
+	gain_xp_leader = { #学习这个特质的经验的条件
+		OR = {
+			operative_leader_mission = root_out_resistance #正在执行任务根除抵抗
+			#任务种类（特工长期执行）：
+			#build_intel_network建立情报网
+			#counter_intelligence反间谍
+			#quiet_network静默情报网
+			#boost_ideology加强意识形态
+			#propaganda政治宣传
+			#root_out_resistance根除抵抗
+			#control_trade控制贸易
+			#diplomatic_pressure外交施压
+
+
+			operative_leader_operation = operation_rescue_operative #特工任务：营救特工
+			#特工小任务（情报任务里的单个任务，分三步）：
+			#infiltration_submarine潜艇部署
+			#infiltration_border穿越中立国边界渗透
+			#infiltration_diplomatic外交护照
+			#infiltration_paradrop伞降渗透
+			#resistance_support_arms_depots建立补给储备
+			##resistance_support_distribute_weapons分发武器
+			#resistance_support_organize_training组织训练营
+			#resistance_support_coordinate_groups协调抵抗组织团体
+			#exfiltration_air_pickup飞机接送
+			#exfiltration_submarine_pickup潜艇接送
+			#exfiltration_border徒步穿越边境
+			#exfiltration_go_to_ground转入地下
+			#capture_cyphers_bribe贿赂士兵
+			#capture_cyphers_raid特战入侵
+			#capture_cyphers_seduction诱惑勾引
+			#capture_cyphers_reverse_engineer逆向工程
+			#resistance_contacts_radio_circuits创建无线电线路
+			#resistance_support_pidgeons分发信鸽
+			#resistance_contacts_briefings战略简报
+			#capture_cyphers_smuggle传递密码
+			#infiltrate_military_bribe行贿
+			#infiltrate_military_seduction施展魅惑
+			#infiltrate_military_turned_pow策反战俘
+			#infiltrate_military_ideological_supporter联络意识形态的支持者
+			#steal_blueprints_bribe行贿
+			#steal_blueprints_seduction施展魅惑
+			#steal_blueprints_infiltrate_naval_design_office渗透海军设计办公室
+			#剩下的不做了，自己去看localisation\simp_chinese\lar_operations_l_simp_chinese.yml
+			#特工任务
+			#operation_capture_cipher偷密码
+			#operation_rescue_operative营救特工
+			#operation_infiltrate_civilian渗透民政
+			#operation_infiltrate_armed_forces_army渗透陆军
+			#operation_infiltrate_armed_forces_navy渗透海军
+			#operation_infiltrate_armed_forces_airforce渗透空军
+			#operation_make_resistance_contacts接触抵抗组织
+			#operation_boost_resistance加强抵抗组织
+			#operation_targeted_sabotage_industry抵抗区破坏工业
+			#operation_targeted_sabotage_infrastructure抵抗区破坏基建
+			#operation_targeted_sabotage_resources抵抗区减少资源
+			#operation_steal_tech_airforce偷空军图纸
+			#operation_steal_tech_army偷陆军图纸
+			#operation_steal_tech_civilian偷工业图纸
+			#operation_steal_tech_navy偷海军图纸
+			#lar_fra_launch_coup发动政变
+			#剩下的不做了，自己去看localisation\simp_chinese\lar_operations_l_simp_chinese.yml
+
+
+			has_done_agency_upgrade = upgrade_commando_training #有情报机构升级特种作战训练
+			#剩余升级在common\intelligence_agency_upgrades\intelligence_agency_upgrades.txt自己去看
+			has_nationality = TAG #有xxx国国籍
+			
+		}
+	}
+}
+
+
+#情报机构分支
+branch_xxxx = { #xxxx是名字随意写，branch_xxxx在本地化里本地化
+	name = { #name随意写
+		picture = GFX_agency_defense_department #图片
+		frame = GFX_upgrade_frame_defense #别改
+		
+	}
+}
+
+#特工任务
+xxxx = { #xxxx是任务名 路径common\operations 命名格式xxxx_historical_operations，xxxx随意写
+	icon = GFX_xxxx #任务图片
+	map_icon = GFX_xxxx #任务在执行时地图上看到的图片
+	name = xxxx #任务名 在本地化里本地化
+	desc = xxxx_desc #任务描述 在本地化里本地化
+	days = 270 #花费的时间
+	priority = 10 #在任务中的排序，和决议同理
+	allowed = {
+		#可以显示的条件
+	}
+	available = {
+		#执行条件
+	}
+	visible = {
+		#显示条件
+	}
+	operatives = 1 #需要特工数量
+	network_strength = 25 #需求间谍网强度
+	on_start = {
+		#任务开始时的效果
+	}
+	outcome_modifiers = {  } #奖励成果修正，里面写上所有与奖励成果有关的例如outcome_modifiers = { operation_outcome operation_steal_tech_outcome }就是与行动效率和盗取蓝图效率有关的
+	cost_modifiers = { target_sabotage_cost operation_cost } #行动花费，这里是与行动花费和破坏活动花费有关系
+	risk_modifiers = { operation_risk operation_steal_tech_risk } #风险根据，这里是与行动风险和窃取蓝图风险有关系
+	outcome_potential = {
+		#潜在结果
+	}
+	risk_chance = 0.25 #基础风险
+	experience = 5 #经验
+	outcome_execute = { # SCOPE_OPERATION
+		#成功结果
+	}
+	phases = { #渗透三阶段，base应该是采用率，这个是第一阶段的小任务
+		infiltration_border = { base = 60 } #三个阶段都是小阶段前面有，还想要就看localisation\simp_chinese\lar_operations_l_simp_chinese.yml
+		infiltration_submarine = { base = 20 }
+		infiltration_diplomatic = { base = 20 }
+	}
+	phases = { #渗透三阶段，base应该是采用率，这个是第二阶段的小任务
+		steal_xxxx = { base = 60 } #三个阶段都是小阶段前面有，还想要就看localisation\simp_chinese\lar_operations_l_simp_chinese.yml
+	}
+	phases = { #渗透三阶段，base应该是采用率，这个是第三阶段的小任务
+		exfiltration_xxxx = { base = 60 } #三个阶段都是小阶段前面有，还想要就看localisation\simp_chinese\lar_operations_l_simp_chinese.yml
+	}
+}

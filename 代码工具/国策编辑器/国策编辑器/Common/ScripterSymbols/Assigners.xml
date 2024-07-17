@@ -1,0 +1,9 @@
+﻿<assigners>
+  <assigner>id</assigner>
+  <assigner>icon</assigner>
+  <assigner>x</assigner>
+  <assigner>y</assigner>
+  <assigner>cost</assigner>
+  <assigner>custom_effect_tooltip</assigner>
+  <assigner>level</assigner>
+</assigners>

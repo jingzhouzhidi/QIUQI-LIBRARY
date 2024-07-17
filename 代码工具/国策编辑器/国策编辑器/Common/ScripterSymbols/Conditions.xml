@@ -1,0 +1,33 @@
+﻿<conditions>
+  <condition>if</condition>
+  <condition>and</condition>
+  <condition>or</condition>
+  <condition>not</condition>
+  <condition>has_added_tension_amount</condition>
+  <condition>is_on_continent</condition>
+  <condition>has_volunteers_amount_from</condition>
+  <condition>original_tag</condition>
+  <condition>civilwar_target</condition>
+  <condition>ai_liberate_desire</condition>
+  <condition>distance_to</condition>
+  <condition>has_annex_war_goal</condition>
+  <condition>is_major</condition>
+  <condition>is_in_home_area</condition>
+  <condition>state_population</condition>
+  <condition>ai_irrationality</condition>
+  <condition>original_research_slots</condition>
+  <condition>has_capitulated</condition>
+  <condition>is_tutorial</condition>
+  <condition>is_historical_focus_on</condition>
+  <condition>has_wargoal_against</condition>
+  <condition>is_justifying_wargoal_against</condition>
+  <condition>has_dlc</condition>
+  <condition>ai_wants_divisions</condition>
+  <condition>has_claimed_state_in_peace_conference</condition>
+  <condition>is_in_peace_conference</condition>
+  <condition>num_owned_neighbour_states</condition>
+  <condition>num_claimed_peace_conference_neighbour_states</condition>
+  <condition>is_island_state</condition>
+  <condition>has_elections</condition>
+  <condition>difficulty</condition>
+</conditions>

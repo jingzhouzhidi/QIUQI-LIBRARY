@@ -1833,3 +1833,15 @@ System.NotImplementedException: 未实现该方法或操作。
 System.NotImplementedException: 未实现该方法或操作。
    在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
    在 System.Windows.DataObject.System.Runtime.InteropServices.ComTypes.IDataObject.SetData(FORMATETC& pFormatetcIn, STGMEDIUM& pmedium, Boolean fRelease)
+System.Runtime.InteropServices.COMException (0x80040206): 当前没有可用的布局。
+   在 System.Windows.Documents.TextStore.GetVisualInfo(PresentationSource& source, IWin32Window& win32Window, ITextView& view)
+System.Runtime.InteropServices.COMException (0x80040206): 当前没有可用的布局。
+   在 System.Windows.Documents.TextStore.GetVisualInfo(PresentationSource& source, IWin32Window& win32Window, ITextView& view)
+System.Runtime.InteropServices.COMException (0x80040206): 当前没有可用的布局。
+   在 System.Windows.Documents.TextStore.GetVisualInfo(PresentationSource& source, IWin32Window& win32Window, ITextView& view)
+System.Runtime.InteropServices.COMException (0x80040206): 当前没有可用的布局。
+   在 System.Windows.Documents.TextStore.GetVisualInfo(PresentationSource& source, IWin32Window& win32Window, ITextView& view)
+System.Runtime.InteropServices.COMException (0x80040206): 当前没有可用的布局。
+   在 System.Windows.Documents.TextStore.GetVisualInfo(PresentationSource& source, IWin32Window& win32Window, ITextView& view)
+System.Runtime.InteropServices.COMException (0x80040206): 当前没有可用的布局。
+   在 System.Windows.Documents.TextStore.GetVisualInfo(PresentationSource& source, IWin32Window& win32Window, ITextView& view)

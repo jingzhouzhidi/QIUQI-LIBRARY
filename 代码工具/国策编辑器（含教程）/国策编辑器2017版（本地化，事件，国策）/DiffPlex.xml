@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DiffPlex</name>
+    </assembly>
+    <members>
+        <member name="T:DiffPlex.DiffBuilder.ISideBySideDiffBuilder">
+            <summary>
+            Provides methods that generate differences between texts for displaying in a side by side view.
+            </summary>
+        </member>
+        <member name="M:DiffPlex.DiffBuilder.ISideBySideDiffBuilder.BuildDiffModel(System.String,System.String)">
+            <summary>
+            Builds a diff model for  displaying diffs in a side by side view
+            </summary>
+            <param name="oldText">The old text.</param>
+            <param name="newText">The new text.</param>
+            <returns>The side by side diff model</returns>
+        </member>
+        <member name="T:DiffPlex.DiffBuilder.Model.SideBySideDiffModel">
+            <summary>
+            A model which represents differences between to texts to be shown side by side
+            </summary>
+        </member>
+        <member name="M:DiffPlex.Differ.CalculateEditLength(System.Int32[],System.Int32,System.Int32,System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            Finds the middle snake and the minimum length of the edit script comparing string A and B
+            </summary>
+            <param name="A"></param>
+            <param name="startA">Lower bound inclusive</param>
+            <param name="endA">Upper bound exclusive</param>
+            <param name="B"></param>
+            <param name="startB">lower bound inclusive</param>
+            <param name="endB">upper bound exclusive</param>
+            <returns></returns>
+        </member>
+        <member name="T:DiffPlex.IDiffer">
+            <summary>
+            Provides methods for generate differences between texts
+            </summary>
+        </member>
+        <member name="T:DiffPlex.Model.DiffBlock">
+            <summary>
+            A block of consecutive edits from A and/or B
+            </summary>
+        </member>
+        <member name="P:DiffPlex.Model.DiffBlock.DeleteStartA">
+            <summary>
+            Position where deletions in A begin
+            </summary>
+        </member>
+        <member name="P:DiffPlex.Model.DiffBlock.DeleteCountA">
+            <summary>
+            The number of deletions in A
+            </summary>
+        </member>
+        <member name="P:DiffPlex.Model.DiffBlock.InsertStartB">
+            <summary>
+            Position where insertion in B begin
+            </summary>
+        </member>
+        <member name="P:DiffPlex.Model.DiffBlock.InsertCountB">
+            <summary>
+            The number of insertions in B
+            </summary>
+        </member>
+        <member name="T:DiffPlex.Model.DiffResult">
+            <summary>
+            The result of diffing two peices of text
+            </summary>
+        </member>
+        <member name="P:DiffPlex.Model.DiffResult.PiecesOld">
+            <summary>
+            The chunked peices of the old text
+            </summary>
+        </member>
+        <member name="P:DiffPlex.Model.DiffResult.PiecesNew">
+            <summary>
+            The chunked peices of the new text
+            </summary>
+        </member>
+        <member name="P:DiffPlex.Model.DiffResult.DiffBlocks">
+            <summary>
+            A collection of DiffBlocks which details deletions and insertions
+            </summary>
+        </member>
+    </members>
+</doc>

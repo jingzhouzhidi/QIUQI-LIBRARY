@@ -1,10 +1,10 @@
-#文件路径：MOD文件夹/scripted_localisation/scripted_localisation文本文档.txt
+#文件路径：MOD/scripted_localisation\*.txt（*为任意文本名字）
 
 #作用：
 #脚本本地化，通过设置不同的条件，可以用于进行动态的文本制作，例如让不同国家的新闻内容不同，让不同国家显示事件的option内容不同
 
 defined_text = {
-	name = Get_脚本本地化名字  #脚本的id，在本地化内容时需用
+	name = name  #脚本的id，在本地化内容时需用
 
 	text = {  ##用于设定分类动态文本
 	   trigger = {
@@ -24,7 +24,7 @@ defined_text = {
 
 #########  在 本 地 化 #############
 
-脚本本地化名字:0"[脚本本地化名字]"
+目标本地化名字:0"[name]"
 
 词条1:0"一个本地化"
 词条2:0"另一个本地化"
@@ -57,7 +57,7 @@ defined_text = {
 
 ###本地化写法##########
 
-GER_GUI:0"[GER_GUI]"
+GER:0"[GER_GUI]"
 
 AOR_GER_SP_LOC_1:0"词条1"
 AOR_GER_SP_LOC_2:0"词条2"

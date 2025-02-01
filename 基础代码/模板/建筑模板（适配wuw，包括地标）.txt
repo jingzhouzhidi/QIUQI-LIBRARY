@@ -1,0 +1,89 @@
+【作者：幸好无声】  所有人可以使用、修改，祝所有mod制作者的制作道理顺利！
+建筑(buildings)在 /Hearts of Iron IV/common/buildings/*.txt 中定义。
+
+buildings = {
+    xxx = {
+		base_cost = 4000 #基础建造花费
+        per_level_extra_cost = 100 #每一级增加的建造花费（参考原版要塞），不写则没有
+		infrastructure_construction_effect = yes/no #是否受到基建等级的建造速度修正
+        provincial = yes #是否只能在小格子上建造（如要塞），这些不能组合在一起（指shares_slots = yes）
+        shares_slots = yes 
+		value = 1 #决定建筑物在空中轰炸行动中的基础生命值，该生命值会随着建筑物的每一层而成倍增加。此外，这也决定了国家在和平会议期间获得的分数。
+        damage_factor = 0.3 #修改该建筑在空袭或陆战中受到的伤害。正值会增加它，而负值会减少它。
+		allied_build = yes #如果写了，则使该建筑算作盟军建筑（意为盟友可以在你的领土建造，你也可以在盟友领土上建造）。
+        only_costal = yes/no #如果指定，则根据建筑的类型，将只能在定义为沿海的省份
+        disabled_in_dmz = yes/no #如果添加，则该建筑物无法在非军事区国家建造或使用。
+		icon_frame = 3 #建筑物图标定义。整数显示 GFX_buildings_strip Sprite 中的哪个帧用于此建筑物。
+        base_cost_conversion = 3000 #转换花费
+		show_modifier = yes #显示该建筑对地区的修正
+		per_controlled_building_extra_cost = 数字 #每多一个建筑就增加的建造花费
+		spawn_point = 生成点 #需要专门设定
+		hide_if_missing_tech = yes #没有此科技时是否隐藏
+		special_icon = GFX_dam_icon_small #图标(如果此建筑对地区或国家有修正可以定义，参考地标和大坝)
+		repair_speed_factor = 小数点后2位 #修复速率
+
+        show_on_map = 3 #确定每个州或每个省 （取决于建筑物类型） 为建筑物定义的建筑物模型数量。每个建筑构造将再添加一个模型。如果未指定，则没有地图模型。
+		show_on_map_meshes = 2 #确定每个建筑模型使用多少个图元。默认情况下，假定为 1。
+		always_shown = yes #如果指定，则无论建筑模型是否被战争迷雾覆盖，都将显示该模型。
+		has_destroyed_mesh = yes #如果指定，如果建筑物已被空袭或占领摧毁，将使游戏使用单独的模型。
+		centered = yes #不知道是什么
+
+		military_production = 将指定数量的军工厂添加到控制器中
+		general_production = 将指定数量的民用工厂添加到控制器中
+		naval_production = 将指定数量的船坞添加到控制器
+		infrastructure =  yes/no使建筑物被标记为基础设施（包括施工速度加成和额外资源）
+		air_base = yes/no使建筑物被标记为空军基地
+		supply_node = yes/no使建筑物被标记为供应节点
+		is_port = yes/no使建筑物被标记为海军港口
+		land_fort = 数字，为该省增加了许多陆地堡垒
+		naval_fort = 数字，为该省增加了许多沿海堡垒
+		refinery = yes/no使建筑物被标记为合成精炼厂
+		fuel_silo = yes/no使建筑物被标记为燃料筒仓
+		radar = yes/no使建筑物被标记为雷达站
+		rocket_production = 数字，定义每天在火箭生产方面取得了多少进展
+		rocket_launch_capacity = 数字，定义构建每天可以发射多少枚火箭
+		nuclear_reactor =  yes/no使建筑物被标记为核反应堆
+		only_display_if_exists = yes #如果存在，则仅显示
+		is_buildable = no #能否建造
+		need_detection = yes #需要检测？
+		need_supply = yes #需要补给
+
+		country_modifiers = { #对于国家的修正
+			enable_for_controllers = { #什么国家控制的情况下修正才生效，不写则没有这个限制
+				TAG
+			}
+			modifiers = {
+				max_fuel_building = 1.5 #k（每级增加的储存石油上限）
+			}
+		}
+		level_cap = {
+			shares_slots = yes #是否和其他建筑共享该地区的格子（如军工民工共享一个地区的建筑槽）
+			state_max = 20 #建造上限（一块地）
+		}
+		state_modifiers = {
+			#填修正
+		}
+	}
+    #原版模板（军工）
+    arms_factory = {
+		show_on_map = 6
+		base_cost = 6000
+		base_cost_conversion = 3000
+		military_production = 1
+		icon_frame = 2
+		max_level = 20
+		shares_slots = yes
+		value = 8
+		infrastructure_construction_effect = yes
+	}
+    
+}
+
+spawn_points = { #生成点
+	xxx = {
+		type = state/province
+		max = 1
+		only_costal = yes 
+		disable_auto_nudging = yes #禁用自动提示?
+	}
+}

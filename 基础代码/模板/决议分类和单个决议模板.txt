@@ -2,7 +2,7 @@
 
 
 
-决议大类txt文件位置common/decisions/categories/xxx_decision_category.txt
+决议大类txt文件位置common/decisions/categories/*.txt（*号为任意文本）
 XX_decision_category = {
 	icon = <图标名>（决议大类的最左边的图标）
 	picture = <图片名>（在决议大类的描述的左边显示）
@@ -28,7 +28,7 @@ XX_decision_category = {
 }
 
 
-小决议txt文件位置common/decisions/xxx.txt
+小决议（任务）txt文件位置common/decisions/xxx.txt
 XXX_decision_category = {
 	XX（小决议） = {
 		
@@ -42,7 +42,7 @@ XXX_decision_category = {
 
 
 		地区高亮显示
-		highlight_states = { state高亮显示
+		highlight_states = { #state高亮显示
 			highlight_state_targets = { 指定高亮显示的state
 				state = <state id>
 				state = <state id>
@@ -50,8 +50,9 @@ XXX_decision_category = {
 			highlight_color_while_active = <值> 是省份高亮显示的颜色，在计时器期间选择决策后，在它被删除之前，从 0 到 3。如果未设置，它将默认为白色轮廓。
 			highlight_color_before_active = <值> 是省份突出显示在选择决策之前的颜色。从 0 到 3。如果未设置，它将默认为白色轮廓。
 		}
-
-		highlight_states = { province高亮显示
+                                
+                                省份高亮显示
+		highlight_states = { #province高亮显示
 			highlight_state_targets = { state = <state_id> } 锁定高亮显示的states
 			highlight_provinces = { <province_id> <province_id> } 指定要高亮显示的province
 		}
@@ -96,7 +97,15 @@ XXX_decision_category = {
 			完成任务的条件
 		}
 		
-		is_good = yes/no（决定任务进度条的颜色）                         
+		is_good = yes/no（决定任务进度条的颜色）    
+      
+                                selectable_mission = yes
+		# 如果已设置，会将任务转换为玩家必须选择按钮的任务。如果未设置或设置为 false，
+		# 则 complete effect 将在 true 后立即触发。                     
+	
+		war_with_on_timeout = TAG
+		#可选，将使游戏假设任务在其范围内将向指定国家宣战。
+		#这用于让 AI 为宣战做准备并在边境集结军队。这也将向目标及其所有盟友发出通知。               
 	
 		days_mission_timeout = 任务时限天数
 		timeout_effect = {                      

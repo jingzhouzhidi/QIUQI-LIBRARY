@@ -1,7 +1,7 @@
 通常位于history/countries/XXX.txt
     create_equipment_variant = {
         name = "名字"
-        type = 装备类型
+        type = 装备类型   #（有man the gun dlc的情况下，海军设计必须使用专门的海军类型，见下面）
         parent_version = 0
         name_group = 名称组（可不写）
         modules = {
@@ -14,6 +14,7 @@
         icon = "图像"
         obsolete = 是否退役装备
     }
+    #示例
     create_equipment_variant = {
         name = "Light Tank Mk. IV" 
         type = light_tank_chassis_1 
@@ -124,6 +125,7 @@
     secondary_turret_hmg = 重机枪
     secondary_turret_small_cannon = 小型加农炮
     secondary_turret_close_support_gun = 近距支援炮
+    additional_machine_guns = 加装机枪
     sloped_armor = 倾斜装甲
     stabilizer = 火炮稳定器
     smoke_launchers = 烟雾发射器
@@ -131,31 +133,52 @@
     wet_ammo_storage = 湿式弹药架
     expanded_fuel_tank = 燃油桶
 
-舰艇舰体
-    ship_hull_submarine_1 = 早期潜艇船体
-    ship_hull_submarine_2 = 1936潜艇船体
-    ship_hull_submarine_3 = 1940潜艇船体
-    ship_hull_submarine_4 = 1944潜艇船体
+##############  海军类型 ##############
+
+    #航空母舰
+    ship_hull_carrier_1 = 1936型航母船体
+    ship_hull_carrier_2 = 1940型航母船体
+    ship_hull_carrier_3 = 1944型航母船体
+    ship_hull_carrier_conversion_bb = 改装战列舰船体
+    ship_hull_carrier_conversion_ca = 改装巡洋舰船体
+    #以此类推
+
+    #巡洋舰
+    ship_hull_cruiser_1 = 早期巡洋舰船体
+    ship_hull_cruiser_2
+    ship_hull_cruiser_3
+    ship_hull_cruiser_4
+    #战列舰
+    ship_hull_pre_dreadnought = 早期重型战舰船体
+    ship_hull_heavy_1
+    ship_hull_heavy_2
+    ship_hull_heavy_3
+    ship_hull_heavy_4
+
+    ship_hull_super_heavy_1 = 超重型战列舰
+
+    #驱逐舰
     ship_hull_light_1 = 早期驱逐舰船体
-    ship_hull_light_2 = 
-    ship_hull_light_3 = 
-    ship_hull_light_4 = 
-    ship_hull_cruiser_1 = 早期潜艇船体
-    ship_hull_cruiser_2 = 
-    ship_hull_cruiser_3 = 
-    ship_hull_cruiser_4 = 
-    ship_hull_submarine_1 = 早期巡洋舰船体
-    ship_hull_submarine_2 = 
-    ship_hull_submarine_3 = 
-    ship_hull_submarine_4 = 
-    ship_hull_heavy_1 = 早期重型战舰船体
-    ship_hull_heavy_2 = 
-    ship_hull_heavy_3 = 
-    ship_hull_heavy_4 = 
-    ship_hull_carrier_0 = 早期航空母舰船体
-    ship_hull_carrier_1 = 
-    ship_hull_carrier_2 = 
-    ship_hull_carrier_3 = 
+    ship_hull_light_2
+    ship_hull_light_3
+    ship_hull_light_4
+    #潜艇
+    ship_hull_submarine_1 = 早期潜艇船体
+    ship_hull_submarine_2
+    ship_hull_submarine_3
+    ship_hull_submarine_4
+
+    ship_hull_cruiser_submarine = 巡洋潜艇
+
+    torpedo_cruiser = 重雷装巡洋舰
+    ship_hull_torpedo_cruiser = 重雷装巡洋舰
+    ship_hull_cruiser_panzerschiff = 装甲舰
+
+    ship_hull_cruiser_coastal_defense_ship = 岸防舰
+
+    SH_battleship_1 = 超重战列舰I型
+    SH_battleship_2 = 超重战列舰II型
+######################################
 舰艇模块
     fixed_ship_battery_slot = 主炮
     fixed_ship_secondaries_slot = 副炮
@@ -240,7 +263,7 @@
     ship_torpedo_sub_4 = 六联装533mm鱼雷发射管
 
     防空炮
-    ship_anti_air_1 = .50重机枪
+    ship_anti_air_1 = 50重机枪
     ship_anti_air_2 = 20mm防空炮
     ship_anti_air_3 = 37mm防空炮
     ship_anti_air_4 = 40mm四联装防空炮
@@ -322,26 +345,57 @@
     ship_armor_carrier_deck = 90mm甲板装甲
 
 飞机机身
-    small_plane_airframe_0 = 战间期小型机身
-    small_plane_airframe_1 = 基础
-    small_plane_airframe_2 = 改进型
-    small_plane_airframe_3 = 先进型
-    small_plane_airframe_4 = 现代
-    cv_small_plane_airframe_0 = 战间期舰载机机身
-    cv_small_plane_airframe_1 = 基础
-    cv_small_plane_airframe_2 = 改进型
-    cv_small_plane_airframe_3 = 先进型
-    cv_small_plane_airframe_4 = 现代
-    medium_plane_airframe_0 = 战间期中型机身
-    medium_plane_airframe_1 = 基础
-    medium_plane_airframe_2 = 改进型
-    medium_plane_airframe_3 = 先进型
-    medium_plane_airframe_4 = 现代
-    large_plane_airframe_0 = 战间期大型机身
-    large_plane_airframe_1 = 基础
-    large_plane_airframe_2 = 改进型
-    large_plane_airframe_3 = 先进型
-    large_plane_airframe_4 = 现代
+fighter_equipment_0 = 战间期型战斗机
+fighter_equipment_1 = 战斗机I型
+fighter_equipment_2 = 战斗机II型
+fighter_equipment_3 = 战斗机III型
+cv_fighter_equipment_0 = 战间期型舰载战斗机
+cv_fighter_equipment_1 = 舰载战斗机I型
+cv_fighter_equipment_2 = 舰载战斗机II型
+cv_fighter_equipment_3 = 舰载战斗机III型
+jet_fighter_equipment_1 = 喷气式战斗机I型
+jet_fighter_equipment_2 = 喷气式战斗机II型
+
+CAS_equipment_1 = 近距支援机I型
+CAS_equipment_2 = 近距支援机II型
+CAS_equipment_3 = 近距支援机III型
+cv_CAS_equipment_1 = 舰载近距支援机I型
+cv_CAS_equipment_2 = 舰载近距支援机II型
+cv_CAS_equipment_3 = 舰载近距支援机III型
+
+nav_bomber_equipment_1 = 海军轰炸机I型
+nav_bomber_equipment_2 = 海军轰炸机II型
+nav_bomber_equipment_3 = 海军轰炸机III型
+cv_nav_bomber_equipment_1 = 舰载海军轰炸机I型
+cv_nav_bomber_equipment_2 = 舰载海军轰炸机II型
+cv_nav_bomber_equipment_3 = 舰载海军轰炸机III型
+
+tac_bomber_equipment_0 = 战间期型轰炸机
+tac_bomber_equipment_1 = 战术轰炸机I型
+tac_bomber_equipment_2 = 战术轰炸机II型
+tac_bomber_equipment_3 = 战术轰炸机III型
+
+heavy_fighter_equipment_1 = 重型战斗机I型
+heavy_fighter_equipment_2 = 重型战斗机II型
+heavy_fighter_equipment_3 = 重型战斗机III型
+
+scout_plane_equipment_1 = 侦察机I型
+scout_plane_equipment_2 = 侦察机II型
+
+tac_bomber_equipment_1 = 战术轰炸机 I型
+tac_bomber_equipment_2 = 战术轰炸机 II型
+tac_bomber_equipment_3 = 战术轰炸机 III型
+
+jet_tac_bomber_equipment_1 = 喷气式战术轰炸机 I型
+jet_tac_bomber_equipment_2 = 喷气式战术轰炸机 II型
+
+strat_bomber_equipment_1 = 战略轰炸机 I型
+strat_bomber_equipment_2 = 战略轰炸机 II型
+strat_bomber_equipment_3 = 战略轰炸机 III型
+
+jet_strat_bomber_equipment_1 = 喷气式战略轰炸机 I型
+
+rocket_suicide_equipment_1 = 自杀攻击用飞行器
 飞机模块
     fixed_main_weapon_slot = 主要武器
     fixed_auxiliary_weapon_slot_1 = 副武器
@@ -382,14 +436,48 @@
     recon_camera = 侦察相机#主武器时仅限中型机身
     布雷
     airdropped_mines = 空投水雷
+    引擎
+    engine_1_1x = 1x引擎I
+    engine_1_2x = 2x引擎I
+    engine_1_3x = 3x引擎I
+    engine_1_4x = 4x引擎I
+    engine_1_6x = 6x引擎I
 
+    engine_2_1x = 1x引擎II
+    engine_2_2x = 2x引擎II
+    engine_2_3x = 3x引擎II
+    engine_2_4x = 4x引擎II
+    engine_2_6x = 6x引擎II
+
+    engine_3_1x = 1x引擎III
+    engine_3_2x = 2x引擎III
+    engine_3_3x = 3x引擎III
+    engine_3_4x = 4x引擎III
+    engine_3_6x = 6x引擎III
+
+    engine_4_1x = 1x引擎IV
+    engine_4_2x = 2x引擎IV
+    engine_4_3x = 3x引擎IV
+    engine_4_4x = 4x引擎IV
+    engine_4_6x = 6x引擎IV
+
+    jet_engine_1x = 1x喷气式引擎
+    jet_engine_2x = 2x喷气式引擎
+    jet_engine_3x = 3x喷气式引擎
+    jet_engine_4x = 4x喷气式引擎
+    jet_engine_6x = 6x喷气式引擎
+
+    rocket_engine_1 = 火箭引擎I
+    rocket_engine_2 = 火箭引擎II
+    rocket_engine_3 = 火箭引擎III
+    炮塔
     lmg_defense_turret = 轻机枪防御炮塔
     lmg_defense_turret_2x = 轻机枪防御炮塔 2x
     hmg_defense_turret = 重机枪防御炮塔
     hmg_defense_turret_2x = 重机枪防御炮塔 2x
     cannon_defense_turret = 机炮防御炮塔
     cannon_defense_turret_2x = 机炮防御炮塔 2x
-
+    
     bomb_sights_1 = 轰炸瞄准具 I
     bomb_sights_2 = 轰炸瞄准具 II
     radio_navigation_1 = 无线电导航 I

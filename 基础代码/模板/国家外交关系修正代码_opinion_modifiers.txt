@@ -1,4 +1,4 @@
-opinion_modifiers文件夹是一个用来专门储存HOI4所有国家外交状况的文件夹
+opinion_modifiers文件夹是一个用来专门储存HOI4所有国家外交状况的文件夹 by秋起.
 其路径在于Hearts of Iron IV/common/opinion_modifiers/*.txt
 
 首先，作为“前端”，即代码效果，格式是如此
@@ -26,11 +26,27 @@ opinion_modifiers = {
 
 		decay = ±xx ###该代码表设计每月外交好感度随时间变化的值，＋号为每月外交好感度增加的值，－号是每月外交好感度减少的值
 
-		trade = yes/no  ###代表是否能与目标国家进行贸易
+		trade = yes/no  ###代表是否能与将外交关系修正同贸易关系修正挂钩
 
 		max_trust = ±xxx ##指一国对另外一国外交好感度最大能到多少，±表示好感度具体的值，一般是先到达max_trust的值之后，再使用decay对当前外交值进行加减
 		min_trust = ±xxx ##指一国对另外一国外交好感度最小能到多少，±表示好感度具体的值，一般是先到达min_trust的值之后，再使用decay对当前外交值进行加减
 
 		#months/years/days = timer（时间） ##具体意思不大清楚，貌似是具有计时器作用，外交态势的值到一定时间后会消失
+
+                                target = yes/no #应该是表示针对？尚不明确
 	}
 }
+
+
+#用法
+#在国策、决议、事件等中可能会有一下代码（以上代码来自mod常用代码模板中）
+
+add_named_threat = { threat = TAG name = 【名字】 }
+#设置威胁（大概是制造紧张度）
+add_opinion_modifier = { target = TAG modifier = 【预设的外交关系】}
+#对某国设定一个外交关系
+remove_opinion_modifier = { target = TAG modifier = 【预设的外交关系】 } 
+#移除与某国的外交关系
+reverse_add_opinion_modifier = { target = TAG modifier = 【预设的外交】 }
+#反向添加外交关系（？？？）
+【预设的外交关系】、【预设的外交】 = 上面opinion_modifiers里定义的xxx

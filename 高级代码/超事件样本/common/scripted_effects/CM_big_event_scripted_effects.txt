@@ -1,3 +1,0 @@
-SE_center = {	
-	set_global_flag = CM_SE_center
-}

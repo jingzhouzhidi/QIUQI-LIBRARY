@@ -53,7 +53,7 @@
 
 ### 特别鸣谢
 
-霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[AOR（赤色极光）制作组](https://space.bilibili.com/15492488)、[CR（天兆之国）制作组](https://space.bilibili.com/3493284349479406)、TOD（亢龙有悔）制作组、[钢铁萌心](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)制作组、TCV（维城歧旅）制作组、TTT（原神：切要关头）制作组、IRIS（九色堇之心）制作组等给予该项目大力支持的各大玩家群体。
+霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[赤色极光(AOR)制作组](https://space.bilibili.com/15492488)、[天兆之国(CR)制作组](https://space.bilibili.com/3493284349479406)、亢龙有悔(TOD)制作组、[钢铁萌心(AB)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)、维城歧途(TCV)制作组、原神：切要关头(TTT)制作组、九色堇之心(IRIS)制作组、哈布斯堡的黄昏(THT)制作组等给予该项目大力支持的各大玩家群体。
 
 ### 鸣谢
 
@@ -81,6 +81,8 @@
 - [4685三代目](https://space.bilibili.com/318894689) - 收录其重置的超事件模板
 - Reordny（IRIS组） - 收录其诸多代码工具
 - 月茗星稀 - 收录其代码工具
+- CO-001（THT组） - 收录其代码工具
+- Cethdriel（少前将领培养系统+新单位与机制MOD作者） - 收录其诸多代码教程
 
 >如因失误，未能将您的的名字（贡献者）添加至鸣谢者栏列当中，请到图书馆内联系我们！还望海涵，感谢！
 
@@ -88,6 +90,6 @@
 ![qq](./image/qq.png)
 秋起.
 
-2025.3.2
+2025.3.20
 
-[更新日志](./更新日志.txt)
+[秋起图书馆更新日志](./更新日志.txt)

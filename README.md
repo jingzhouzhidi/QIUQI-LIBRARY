@@ -53,7 +53,7 @@
 
 ### 特别鸣谢
 
-霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[赤色极光(AOR)制作组](https://space.bilibili.com/15492488)、[天兆之国(CR)制作组](https://space.bilibili.com/3493284349479406)、亢龙有悔(TOD)制作组、[钢铁萌心(AB)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)、维城歧途(TCV)制作组、原神：切要关头(TTT)制作组、九色堇之心(IRIS)制作组、哈布斯堡的黄昏(THT)制作组、日共重置：粉碎帝国、日共重置：国家扩展等给予该项目大力支持的各大玩家群体。
+霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[赤色极光(AOR)制作组](https://space.bilibili.com/15492488)、[天兆之国(CR)制作组](https://space.bilibili.com/3493284349479406)、亢龙有悔(TOD)制作组、[钢铁萌心(AB)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)、维城歧途(TCV)制作组、原神：切要关头(TTT)制作组、九色堇之心(IRIS)制作组、哈布斯堡的黄昏(THT)制作组、日共重置：粉碎帝国模组、日共重置：内容扩展模组、唤醒真虎模组等给予该项目大力支持的各大玩家群体。
 
 ### 鸣谢
 

@@ -53,7 +53,7 @@
 
 ### 特别鸣谢
 
-霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[赤色极光(AOR)制作组](https://space.bilibili.com/15492488)、[天兆之国(CR)制作组](https://space.bilibili.com/3493284349479406)、亢龙有悔(TOD)制作组、[钢铁萌心(AB)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)、维城歧途(TCV)制作组、原神：切要关头(TTT)制作组、九色堇之心(IRIS)制作组、哈布斯堡的黄昏(THT)制作组、日共重置：粉碎帝国模组、日共重置：内容扩展模组、唤醒真虎模组等给予该项目大力支持的各大玩家群体。
+霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[赤色极光(AOR)制作组](https://space.bilibili.com/15492488)、[天兆之国(CR)制作组](https://space.bilibili.com/3493284349479406)、亢龙有悔(TOD)制作组、[钢铁萌心(AH)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)、维城歧途(TCV)制作组、原神：切要关头(TTT)制作组、九色堇之心(IRIS)制作组、哈布斯堡的黄昏(THT)制作组、日共重置：粉碎帝国模组、日共重置：内容扩展模组、唤醒真虎模组、灵钢协奏曲(SPC)制作组等给予该项目大力支持的各大玩家群体。
 
 ### 鸣谢
 
@@ -62,7 +62,7 @@
 - [西里斯-Sirius](https://space.bilibili.com/11067472) - 为图书馆所作宣传（MOD联合视频）
 - 希尔（钢铁萌心制作组） - 所供诸多代码工具
 - [战国（新生）](https://space.bilibili.com/1029778161) - 收录其代码案例、担任图书馆群聊管理
-- [幸好无声（胡桃）](https://space.bilibili.com/545733083) - 收录其大量代码模板、案例等、担任图书馆群聊管理
+- [幸好无声（胡桃）](https://space.bilibili.com/545733083) - 收录其大量代码模板、案例等
 - [希尔达](https://steamcommunity.com/sharedfiles/filedetails/?id=3285343649)（白雪群） - 收录其代码模板
 - [黑白平行](https://space.bilibili.com/13276247)（SPC组） - 收录其诸多代码工具、担任图书馆群聊管理
 - [MangGong](https://github.com/MangoGong)（TCV组） - 收录其诸多代码工具
@@ -85,6 +85,7 @@
 - Cethdriel（少前将领培养系统+新单位与机制MOD作者） - 收录其诸多代码教程
 - 思绪过分深情（Amadeus） - 收录其字体教程
 - Antarctica - 同秋起共同制作科技教程模板
+- Aenyrag - 提供代码工具
 
 >如因失误，未能将您的的名字（贡献者）添加至鸣谢者栏列当中，请到图书馆内联系我们！还望海涵，感谢！
 

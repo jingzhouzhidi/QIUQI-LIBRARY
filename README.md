@@ -53,7 +53,7 @@
 
 ### 特别鸣谢
 
-霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[赤色极光(AOR)制作组](https://space.bilibili.com/15492488)、[天兆之国(CR)制作组](https://space.bilibili.com/3493284349479406)、亢龙有悔(TOD)制作组、[钢铁萌心(AH)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)、维城歧途(TCV)制作组、原神：切要关头(TTT)制作组、九色堇之心(IRIS)制作组、哈布斯堡的黄昏(THT)制作组、日共重置：粉碎帝国模组、日共重置：内容扩展模组、唤醒真虎模组、灵钢协奏曲(SPC)制作组等给予该项目大力支持的各大玩家群体。
+霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[赤色极光(AOR)制作组](https://space.bilibili.com/15492488)、[天兆之国(CR)制作组](https://space.bilibili.com/3493284349479406)、亢龙有悔(TOD)制作组、[钢铁萌心(AH)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)、维城歧途(TCV)制作组、原神：切要关头(TTT)制作组、九色堇之心(IRIS)制作组、哈布斯堡的黄昏(THT)制作组、日共重置：粉碎帝国模组、日共重置：内容扩展模组、唤醒真虎模组、灵钢协奏曲(SPC)制作组、红与白：炼铸钢铁的人们制作组、最美好的小祥模组、The Sakiko Rises(TSR)制作组、新秩序：铁杵成针(TNO:IPN)制作组、新秩序：德意志社会主义共和国(TNO:DSR)制作组、英国国策重置模组等给予该项目大力支持的各大玩家群体。
 
 ### 鸣谢
 
@@ -86,6 +86,10 @@
 - 思绪过分深情（Amadeus） - 收录其字体教程
 - Antarctica - 同秋起共同制作科技教程模板
 - Aenyrag - 提供代码工具
+- UPRX(TER组) - 提供地图制作代码教程
+- 永遠のプリンセスの守護者 - 帮助图书馆完成图标重置
+- Krrat Main(复苏之日组) - 提供两个暴雨组处MOD制作通用教程
+- iWagination - 提供大量GUI系列教程
 
 >如因失误，未能将您的的名字（贡献者）添加至鸣谢者栏列当中，请到图书馆内联系我们！还望海涵，感谢！
 

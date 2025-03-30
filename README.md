@@ -2,7 +2,7 @@
     霜泽(秋起)图书馆
 </h1>
 
-![logo](./image/logo.png)
+![logo](./image/logo.jpg)
 
 **首先，欢迎各位MOD界的同志们使用【秋起图书馆】（霜泽图书馆）！**
 
@@ -53,7 +53,16 @@
 
 ### 特别鸣谢
 
-霜泽图书馆及其附属群聊、白雪老师的完美教室及其附属群聊、[PUMS](https://space.bilibili.com/1368200706)（P社联合MODS）及其附属群聊、[赤色极光(AOR)制作组](https://space.bilibili.com/15492488)、[天兆之国(CR)制作组](https://space.bilibili.com/3493284349479406)、亢龙有悔(TOD)制作组、[钢铁萌心(AH)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)、维城歧途(TCV)制作组、原神：切要关头(TTT)制作组、九色堇之心(IRIS)制作组、哈布斯堡的黄昏(THT)制作组、日共重置：粉碎帝国模组、日共重置：内容扩展模组、唤醒真虎模组、灵钢协奏曲(SPC)制作组等给予该项目大力支持的各大玩家群体。
+| 霜泽图书馆及其附属群聊 | 白雪老师的完美教室及其附属群聊 |  PUMS(P社联合MODS)及其附属群聊 |
+| :----- | :--: | -------: |
+| 暴雨工作室(辖[复苏之日](https://steamcommunity.com/sharedfiles/filedetails/?id=3015788042) ＆ [重铸明日](https://steamcommunity.com/sharedfiles/filedetails/?id=3029184172)) |  赤色极光(AOR)制作组 | [天兆之国](https://steamcommunity.com/sharedfiles/filedetails/?id=3018869743)(CR)制作组 |
+| 亢龙有悔(TOD)制作组 | [钢铁萌心](https://steamcommunity.com/sharedfiles/filedetails/?id=2879371758)(AH)制作组 | 维城歧途(TCV)制作组  |
+| [原神：切要关头](https://steamcommunity.com/sharedfiles/filedetails/?id=2806804193)(TTT)制作组   |  [九色堇之心](https://steamcommunity.com/sharedfiles/filedetails/?id=2739911713)(IRIS)制作组  |  [哈布斯堡的黄昏](https://steamcommunity.com/sharedfiles/filedetails/?id=3011069378)(THT)制作组 |
+|[日共重置：粉碎帝国模组](https://steamcommunity.com/sharedfiles/filedetails/?id=2064073319) | [日共重置：内容扩展模组](https://steamcommunity.com/sharedfiles/filedetails/?id=3254004005)| [唤醒真虎模组](https://steamcommunity.com/sharedfiles/filedetails/?id=2796382905)|
+|[红与白：炼铸钢铁的人们](https://steamcommunity.com/sharedfiles/filedetails/?id=3429688914)制作组 | [灵钢协奏曲](https://steamcommunity.com/sharedfiles/filedetails/?id=2860967305)(SPC)制作组 | [最美好的小祥](https://steamcommunity.com/sharedfiles/filedetails/?id=3340670106)模组 |
+| [The Sakiko Rises](https://steamcommunity.com/sharedfiles/filedetails/?id=3452890784)(TSR)制作组| [新秩序：铁杵成针](https://steamcommunity.com/sharedfiles/filedetails/?id=3438313516)(TNO:IPN)制作组 | [新秩序：德意志社会主义共和国](https://steamcommunity.com/sharedfiles/filedetails/?id=3222941019)(TNO:DSR)制作组|
+|[英国国策重置](https://steamcommunity.com/sharedfiles/filedetails/?id=3353818187)模组|[KX部分国家微调](https://steamcommunity.com/sharedfiles/filedetails/?id=3244364529)(KXX)模组| [碧蓝航线](https://steamcommunity.com/sharedfiles/filedetails/?id=2249768662)模组|
+|万摸殿制作组(辖[碧蓝档案将领包](https://steamcommunity.com/sharedfiles/filedetails/?id=2887728297)＆碧蓝档案：自始复新)|||
 
 ### 鸣谢
 
@@ -94,5 +103,15 @@
 秋起.
 
 2025.3.24
+
+---
+
+## 联合宣传
+
+近日，秋起图书馆steam版本在创意工坊上取得较大的胜利。但因MOD本身并非为可游玩MOD，导致范围受限。为了打破瓶颈期，本着自愿原则，我们欢迎各大使用本图书馆的各大MOD同图书馆进行联合宣传（即在双方的MOD推荐/鸣谢名单中添加图书馆MOD链接），感谢各位支持！共同推动MOD中文社区向外扩展以助推更多优质内容产生！（如有需要图书馆添加致谢等联合宣传活动，请联系馆长-QQ：241289163）
+
+并且我们借由此欢迎各位代码界的同志们投稿各类代码模板、教程、工具等，共同推动MOD圈之繁荣，感谢各位！
+
+---
 
 [秋起图书馆更新日志](./更新日志.txt)

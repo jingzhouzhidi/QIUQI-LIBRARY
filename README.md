@@ -45,7 +45,7 @@
 
 > 霜泽图书馆汉化组同时承担钢铁雄心4WIKI页面、钢铁雄心4大型MOD元首之国、钢铁雄心4为国而战MOD的汉化项目，欢迎各位对汉化翻译感兴趣的同志们到来！
 
--元首之国玩家院(汉化组直辖群聊)：1025656289
+- 元首之国玩家院(汉化组直辖群聊)：1025656289
 
 >霜泽图书馆汉化组开通了由我们承担汉化的【元首之国】项目的玩家水群，欢迎各位的到来！
 
@@ -58,6 +58,12 @@
 
 [霜泽图书馆（Wolai馆区）](https://www.wolai.com/public-invitation/gFTAf2i4WTG1sWqGbXkG2F)
 > wolai馆区用于征集代码各类建议和汉化建议，欢迎各位反馈！
+
+### Discord区
+Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
+
+### Steam创意工坊
+秋起图书馆(MOD)：https://steamcommunity.com/sharedfiles/filedetails/?id=3445449478
 
 ### 友谊群聊
 
@@ -125,6 +131,10 @@
 - [anzai249](https://github.com/anzai249) - 授权提供钢铁雄心4大众脸生成器
 - 德·瓦莱拉 - 提供预制核心圈模板
 - Mugi(TNO:SFFH组) - 提供“有趣的国家”GUI修改教程
+- 绪山花(AOR组) - 提供大量代码模板、教程
+- 红色大闸蟹(AOR组；CR组) - 提供新闻图片类工具
+- Talirian(PIHC组) - 提供代码数值对数运算教程、HOI4dev工具等
+
 
 >如因失误，未能将您的的名字（贡献者）添加至鸣谢者栏列当中，请到图书馆内联系我们！还望海涵，感谢！
 

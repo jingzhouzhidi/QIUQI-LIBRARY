@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Controls>
+  <Assignations>
+    <Control Text="Scripter_Assignation_Custom" Code="prop = value" IsNotEditable="false" CanHaveChild="false"/>
+  </Assignations>
+  <Blocks>
+    <Control Text="Scripter_Block_Immediate" Code="immediate = {}" IsNotEditable="true" CanHaveChild="true"/>
+    <Control Text="Scripter_Block_MTTH" Code="mean_time_to_happen = {}" IsNotEditable="true" CanHaveChild="true"/>
+    <Control Text="Scripter_Block_Trigger" Code="trigger = {}" IsNotEditable="true" CanHaveChild="true"/>
+    <Control Text="Scripter_Block_Custom" Code="block_name = {}" IsNotEditable="false" CanHaveChild="true"/>
+  </Blocks>
+  <Conditions>
+    <Control Text="Scripter_Condition_If" Code="if = {}" IsNotEditable="true" CanHaveChild="true"/>
+    <Control Text="Scripter_Condition_AND" Code="AND = {}" IsNotEditable="true" CanHaveChild="true"/>
+    <Control Text="Scripter_Condition_OR" Code="OR = {}" IsNotEditable="true" CanHaveChild="true"/>
+    <Control Text="Scripter_Condition_NOT" Code="NOT = {}" IsNotEditable="true" CanHaveChild="true"/>
+    <Control Text="Scripter_Condition_Limit" Code="limit = {}" IsNotEditable="true" CanHaveChild="true"/>
+  </Conditions>
+</Controls>

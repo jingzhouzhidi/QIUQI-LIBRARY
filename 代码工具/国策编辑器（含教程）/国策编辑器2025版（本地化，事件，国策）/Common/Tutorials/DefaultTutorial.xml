@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- All possible fields for steps are : 
+* Text - Mandatory, defines the text that will be displayed
+* Highlight - Optional, defines which component to highlight. Can be either a control name of fully defined class, will prioritize class.
+* Circle - Optional, can be anything. Defines if a circle is to be drawn to highlight instead of a rectangle
+* WaitForMessage - Optional, defines which message sent by the internal messenger the tutorial should wait for. Will remove the continue button.
+* Arrow - Optional, can be anything. Defines if an arrow is to be drawn next to the highlighted control.
+* RightClick - Optional, can be anything. Defines is a right click is to be sent on the highlighted control.
+* CommandToRun - Optional, defines which relay command to run on the component's view model.
+* MessageToSend - Optional, defines which message to send to the internal messenger.
+Please request messages or control names to be added in the dev thread or on github.
+-->
+<tutorials>
+  <tutorial control="MainGrid">
+    <step Text="Tutorial_Main_1"/>
+    <step Text="Tutorial_Main_2" Highlight="FileViewer" Arrow="Arrow"/>
+    <step Text="Tutorial_Main_3" Highlight="FileViewerToolbar" Arrow="Arrow"/>
+    <step Text="Tutorial_Main_4" Highlight="FileViewer" Arrow="Arrow" RightClick="RightClick"/>
+    <step Text="Tutorial_Main_5" Highlight="AddButton" Arrow="Arrow"/>
+    <step Text="Tutorial_Main_6" Highlight="DeleteButton" Arrow="Arrow"/>
+    <step Text="Tutorial_Main_7" Highlight="EditButton" Arrow="Arrow"/>
+    <step Text="Tutorial_Main_8" Highlight="RenameButton" Arrow="Arrow"/>
+    <step Text="Tutorial_Main_9" Highlight="CopyButton" Arrow="Arrow"/>
+    <step Text="Tutorial_Main_10"/>
+    <step Text="Tutorial_Main_11"/>
+    <step Text="Tutorial_Main_12" WaitForMessage="OpenedProjectFylout"/>
+    <step Text="Tutorial_Main_13" Highlight="ProjectFlyout" WaitForMessage="ClosedProjectFylout"/>
+    <step Text="Tutorial_End"/>
+  </tutorial>
+  <tutorial control="FociGrid">
+    <step Text="Tutorial_Focus_1"/>
+    <step Text="Tutorial_Focus_2" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_Focus_3" Highlight="FocusGridScroll" RightClick="RightClick" WaitForMessage="ShowAddFocus"/>
+    <step Text="Tutorial_Focus_4" Highlight="FocusFlyout" WaitForMessage="FocusLoaded" Arrow="Arrow"/>
+    <step Text="Tutorial_Focus_5" Highlight="FocusIcon" Circle="Circle" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_6" Highlight="FocusIcon" Circle="Circle" Arrow="Arrow" RightClick="RightClick"/>
+    <step Text="Tutorial_Focus_7" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_Focus_8" Highlight="FocusIcon" Circle="Circle" Arrow="Arrow" RightClick="RightClick" WaitForMessage="ShowEditFocus" />
+    <step Text="Tutorial_Focus_9" Highlight="FocusFlyout" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_10" Highlight="UniquenameTextBox" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_11" Highlight="TextTextBox" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_12" Highlight="VisibleNameTextBox" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_13" Highlight="VisibleNameButton" Circle="Circle" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_14" Highlight="DescriptionTextBox" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_15" Highlight="XControl" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_16" Highlight="YControl" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_17" Highlight="CostControl" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_18" Highlight="EditFocusImage" Arrow="Arrow" />
+    <step Text="Tutorial_Focus_19" Highlight="FocusFlyout" Arrow="Arrow" WaitForMessage="CloseEditFocus"/>
+    <step Text="Tutorial_Focus_20" Highlight="FocusGridScroll" WaitForMessage="CloseEditFocus"/>
+    <step Text="Tutorial_Focus_21" Highlight="FocusIcon" Circle="Circle" Arrow="Arrow" RightClick="RightClick"/>
+    <step Text="Tutorial_Focus_22" Highlight="FocusIcon" Circle="Circle" Arrow="Arrow" RightClick="RightClick" WaitForMessage="AddFocusMutually"/>
+    <step Text="Tutorial_Focus_23" Highlight="FocusGridScroll" WaitForMessage="FinishAddFocusMutually"/>
+    <step Text="Tutorial_Focus_24" Highlight="FocusGridScroll" WaitForMessage="CloseEditFocus"/>
+    <step Text="Tutorial_Focus_25" Highlight="FocusIcon" Circle="Circle" Arrow="Arrow" RightClick="RightClick" WaitForMessage="AddFocusPrerequisite"/>
+    <step Text="Tutorial_Focus_26" Highlight="FocusGridScroll" WaitForMessage="FinishAddFocusPrerequisite"/>
+    <step Text="Tutorial_Focus_27" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_Focus_28" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_Focus_29" Highlight="FocusIcon" Circle="Circle" Arrow="Arrow" RightClick="RightClick" WaitForMessage="MakeRelativeTo"/>
+    <step Text="Tutorial_Focus_30" Highlight="FocusGridScroll" WaitForMessage="FinishMakeRelativeTo"/>
+    <step Text="Tutorial_Focus_31" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_Focus_32" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_Focus_33" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_Focus_34" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_Focus_35" Highlight="FocusIcon" Circle="Circle" Arrow="Arrow" RightClick="RightClick" />
+    <step Text="Tutorial_Focus_36" Highlight="FocusGridScroll"/>
+    <step Text="Tutorial_End"/>
+  </tutorial>
+  <tutorial control="LocalizationList">
+    <step Text="Tutorial_Localisation_1"/>
+    <step Text="Tutorial_Localisation_2" Highlight="LocalizationList"/>
+    <step Text="Tutorial_Localisation_3" Highlight="LocalizationList"/>
+    <step Text="Tutorial_Localisation_4" Highlight="LocalizationList"/>
+    <step Text="Tutorial_Localisation_5" Highlight="FilterKeyButton" Circle="Circle" Arrow="Arrow"/>
+    <step Text="Tutorial_Localisation_6" Highlight="LocalizationList"/>
+    <step Text="Tutorial_End"/>
+  </tutorial>
+  <tutorial control="MainFileGrid">
+    <step Text="Tutorial_File_1"/>
+    <step Text="Tutorial_File_2"/>
+    <step Text="Tutorial_File_3" Highlight="FileChoiceList" WaitForMessage="ChosenNewFile"/>
+    <step Text="Tutorial_File_4" Highlight="FileTypeList" WaitForMessage="NewFocusTreeFile"/>
+    <step Text="Tutorial_File_5" Highlight="FileEditor"/>
+    <step Text="Tutorial_File_6" Highlight="FocusTreeFilename"/>
+    <step Text="Tutorial_File_7" Highlight="FocusTreeTag"/>
+    <step Text="Tutorial_File_8" Highlight="FocusTreeAddMods"/>
+    <step Text="Tutorial_File_9" Highlight="MainFileGrid" WaitForMessage="NewLocalizationFile"/>
+    <step Text="Tutorial_File_10" Highlight="LocalizationLanguage"/>
+    <step Text="Tutorial_File_11" Highlight="MainFileGrid" WaitForMessage="NewEventFile"/>
+    <step Text="Tutorial_File_12" Highlight="EventNamespace"/>
+    <step Text="Tutorial_File_13" Highlight="MainFileGrid" WaitForMessage="NewScriptFile"/>
+    <step Text="Tutorial_File_14" Highlight="FileEditor"/>
+    <step Text="Tutorial_End"/>
+  </tutorial>
+  <tutorial control="ProjectMainEditor"> 
+    <step Text="Tutorial_Project_1"/>
+    <step Text="Tutorial_Project_2" Highlight="ProjectMainEditor"/>
+    <step Text="Tutorial_Project_3" Highlight="Filename"/>
+    <step Text="Tutorial_Project_4" Highlight="ProjectName"/>
+    <step Text="Tutorial_Project_5" Highlight="DefaultLocalization"/>
+    <step Text="Tutorial_Project_6" Highlight="ListModFolders"/>
+    <step Text="Tutorial_End"/>
+  </tutorial>
+</tutorials>

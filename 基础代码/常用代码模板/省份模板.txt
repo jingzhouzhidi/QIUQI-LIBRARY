@@ -1,0 +1,34 @@
+state={
+	id=242 #省份id，重要
+	name="STATE_242" #省份名称
+	provinces={ #该省份下的地块，重要
+		528 2246 2333 3322 
+	}
+	history={ #历史文件夹，包括该省份的控制者，核心，建筑.....
+		owner = LYU #控制者，后跟国家代码tag
+		add_core_of = LYU #核心
+		victory_points = { 2246 1 } #胜利点，第一个2246是胜利点位置，第二个1是分数
+		buildings = { #建筑，具体看维基百科
+			infrastructure = 5
+			industrial_complex = 3
+			arms_factory = 1
+			2246 = { #某地块建筑
+				bunker = 3
+				dockyard = 5
+			}
+		}
+		219.1.1 = { #第二个剧本的省份归属
+            owner = WUU
+			add_core_of = WUU
+
+		
+
+		
+
+	
+		}
+	}
+	manpower=131000 #人口，重要
+	state_category = city #省份类型，重要
+	local_supplies = 0.0
+}

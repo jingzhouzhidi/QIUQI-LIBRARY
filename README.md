@@ -87,7 +87,7 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
 |[红与白：炼铸钢铁的人们](https://steamcommunity.com/sharedfiles/filedetails/?id=3429688914)制作组 | [灵钢协奏曲](https://steamcommunity.com/sharedfiles/filedetails/?id=2860967305)(SPC)制作组 | [最美好的小祥](https://steamcommunity.com/sharedfiles/filedetails/?id=3340670106)模组 |
 | [The Sakiko Rises](https://steamcommunity.com/sharedfiles/filedetails/?id=3452890784)(TSR)制作组| [新秩序：铁杵成针](https://steamcommunity.com/sharedfiles/filedetails/?id=3438313516)(TNO:IPN)制作组 | [新秩序：德意志社会主义共和国](https://steamcommunity.com/sharedfiles/filedetails/?id=3222941019)(TNO:DSR)制作组|
 |[英国国策重置](https://steamcommunity.com/sharedfiles/filedetails/?id=3353818187)模组|[KX部分国家微调](https://steamcommunity.com/sharedfiles/filedetails/?id=3244364529)(KXX)模组| [碧蓝航线](https://steamcommunity.com/sharedfiles/filedetails/?id=2249768662)模组|
-|万摸殿制作组(辖[碧蓝档案将领包](https://steamcommunity.com/sharedfiles/filedetails/?id=2887728297)＆碧蓝档案：自始复新)|||
+|万摸殿制作组(辖[碧蓝档案将领包](https://steamcommunity.com/sharedfiles/filedetails/?id=2887728297)＆碧蓝档案：自始复新)|The Fire Redux(烈焰升腾重置、TFX)制作组|[蔚蓝新世界(ANW)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=3114407695)|
 
 ### 鸣谢
 

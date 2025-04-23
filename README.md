@@ -109,9 +109,9 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
 - 电锯（PUMS） - 收录诸多代码模板、教程
 - BLO（AOR组） - 收录其代码工具
 - [波罗](https://space.bilibili.com/403825504) - 提供代码模板、教程
-- [Y鱼の饼B](https://space.bilibili.com/546778033)（雨打芭蕉组） - 担任图书馆群聊管理，并为美工馆建设做出贡献
-- sergey taboritsky(TNO:DSR组；TNO:IPN组) - 担任图书馆群聊管理，并为汉化组建设做出贡献
-- 华莎（CR组） - 担任图书馆群聊管控，并为美工馆建设做出贡献
+- [Y鱼の饼B](https://space.bilibili.com/546778033)（赤潮:雨打芭蕉组） - 担任图书馆群聊管理，并为美工馆建设做出贡献
+- sergey taboritsky(TNO:DSR组；TNO:IPN组；TNO:SFFH组；TFR组；TFX组) - 担任图书馆群聊管理，并为汉化组建设做出贡献
+- 华莎（CR组） - 担任图书馆群聊管理，并为美工馆建设做出贡献
 - [4685三代目](https://space.bilibili.com/318894689) - 收录其重置的超事件模板
 - Reordny（IRIS组） - 收录其诸多代码工具
 - 月茗星稀 - 收录其诸多代码工具
@@ -138,6 +138,7 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
 - 贝拉·库恩(TOD组) - 提供民族精神编辑器工具
 - 影盐 - 提供特殊工程模板
 - Apolynoid - 提供自定义制造商的修改模板
+- 斯特康米(烈焰升腾:潜龙腾渊组) - 提供其撰写代码教程合集
 
 
 >如因失误，未能将您的的名字（贡献者）添加至鸣谢者栏列当中，请到图书馆内联系我们！还望海涵，感谢！

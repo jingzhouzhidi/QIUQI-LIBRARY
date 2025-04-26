@@ -1,38 +1,41 @@
 #########
 原作者：SS
 #########
-实时更新：胡桃
-#########
+在此感谢对钢四modding社区做出贡献的所有人
 
-#修改日期：2024.12.11 23:05
+#修改日期：2025.4.26 18：35 最后更改：hutao
 #设置变量，在国家历史文件里面设置
 set_variable = { var = XXX } #定义一个变量：var是变量名字，XXX是数值
 或
 set_temp_variable = { 
-	var = var_name 
-	value = XXX #时间
-} #设定限时变量
+	var = var_name #变量名 
+	value = XXX  #数值
+} #设定临时变量
 add_to_variable = { var = XXX } #加变量
 subtract_from_variable = { var = XXX } #减变量
 multiply_variable = { var_name = 2 } #var_name变量乘2
 multiply_variable = { var_name = var_name_2 } #var_name变量 乘 var_name_2
 divide_variable = { var = XXX } #除以变量
-#以下的我不知道，自己看ybg的视频学
-modulo_variable = { var = XXX }
-randomize_variable = {
-	var = var_name
-	distribution = uniform/binomial
-	min = 0
-	max = 1
+#已补充 by mugi
+modulo_variable = { var = XXX } #取模，即求余数，XXX是除数，var是被除数，求余数的结果储存至var变量中
+randomize_variable = { #随机变量，随机后的值储存在var变量中
+	var = var_name #变量名
+	distribution = uniform/binomial/poisson #分布类型，uniform是均匀分布，binomial是二项分布，poisson是泊松分布
+	min = 0 #最小值，数值或变量
+	max = 1 #最大值，数值或变量
+	lambda = 1 #泊松分布的λ值，数值或变量
 }
-clamp_variable = {
-	var = var_name
-	min = var_name_2
-	max = var_name_3
+#关于泊松分布：泊松分布是指数学期望与方差均等于lambda（λ）的离散概率分布
+#lambda是一个正数，表示单位时间内发生事件的平均次数。泊松分布的概率质量函数为：P(X=k)=(λ^k * e^(-λ)) / k!，其中k为非负整数，e为自然对数的底数。
+#lambda越大，事件发生的次数越多，分布越集中在平均值附近；lambda越小，事件发生的次数越少，分布越分散。即lambda越大分布越趋近于正态分布。
+clamp_variable = { #钳制变量，单次检查变量值是否在范围内，若小于最小值则设置为最小值，若大于最大值则设置为最大值
+	var = var_name #变量名
+	min = var_name_2 #最小值，var_name_2是变量名，最小值为var_name_2的值，同时也可以是数值
+	max = var_name_3 #最大值，var_name_3是变量名，最大值为var_name_3的值，同时也可以是数值
 }
-round_variable = var_name
+round_variable = var_name #四舍五入，var_name是变量名，四舍五入后变量值为整数，结果储存在var_name变量中
 
-clear_variable = var_name #清空变量，貌似是值变成0
+clear_variable = var_name #清除变量，var_name是变量名，清除后变量值为0
 
 GUI初始位置,不写默认左上方
 Orientation = "LOWER_LEFT" 左下方
@@ -45,7 +48,7 @@ Orientation = "CENTER_DOWN" 正下方
 
 \n = 文本描述进入下一行
 
-字体颜色（事件无法使用）
+字体颜色（事件无法使用）（使用alt+0167来打出§符号）
 §R123§! = 123为红色字体 B深蓝色 C天蓝色 G绿色 L灰色 O橙色 R红色 Y黄色 #WIKI有
 
 民主 = democratic  法西斯 = fascism  共产主义 = communism  中立 = neutrality
@@ -76,91 +79,178 @@ centrism = 中间路线
 
 #国策研究加成代码 
 	add_tech_bonus = {
-		name = 名字
+		name = 加成卡名字
 		bonus = 加成多少
 		uses = 数量
 		category = 种类
 		technology = 科技
 		ahead_reduction = 超前研究N年
 	}
-	add_tech_bonus = {
-		bonus = 1.0 #研究加成100%
-		ahead_reduction = 1 #超前研究1年
-		uses = 1
-		category = tp_tech #科技
-	}
-#某种科技的研究速度加成(总的研究速度代码在民族精神里,研究速度可以放特质里，而某种科技的加成不行，
- 只能直接添加在内阁里，此代码可以直接打在民族精神下面，不用放在modifier里)
-
-	research_bonus = {
-		种类 = 加成速度
-	}
-	
-#研究加成种类（可以是直接的科技，也可以是种类，直接的科技去科技文件复制，种类去科技tags找）
-	construction_tech = 建筑科技
-	excavation_tech = 挖掘技术
-	synth_resources = 合成资源 
+#研究加成种类（可以是直接的科技，也可以是种类，直接的科技去科技文件复制，种类去科技tags找）    
+	light_air = 轻型飞机
+	medium_air = 中型飞机
+	heavy_air = 重型飞机
+	armor = 装甲科技
+	cat_light_armor = 轻型坦克型号
+	cat_medium_armor = 中型坦克型号
+	cat_heavy_armor = 重型坦克型号
+	artillery = 火炮
+	cat_anti_tank = 反坦克火炮
+	cat_anti_air = 防空炮
+	naval_air = 舰载飞机
+	infantry_weapons = 步兵装备
+	motorized_equipment = 摩托化装备 #卡车及衍生装备
+	cat_mechanized_equipment = 机械化装备型号
+	naval_equipment = 舰船
+	rocketry = 火箭学科技
+	nuclear = 核科技
 	industry = 工业
 	electronics = 电子学
-	nuclear = 核能
-	rocketry = 火箭
-	infantry_weapons = 步兵武器
-	support_tech = 支援连科技
+	cat_fortification = 防御工程
 	land_doctrine = 陆军学说
-	cat_mobile_warfare = 机动作战
-	motorized_equipment = 摩托化装备		
-	artillery = 火炮
-	cat_anti_tank = 反坦克炮
-	armor = 装甲
-	cat_heavy_armor = 重型坦克
-	naval_doctrine = 海军学说
-	dd_tech = 驱逐舰
-	cl_tech = 轻巡
-	bc_tech = 战列巡洋舰
-	ca_tech = 重巡
-	ss_tech = 潜艇
-	cv_tech = 航母
-	bb_tech = 战列舰
 	air_doctrine = 空军学说
-	light_fighter = 轻型战斗机
-	cat_heavy_fighter = 重型战斗机
-	tactical_bomber = 战术轰炸机
-	cat_strategic_bomber = 战略轰炸机
-	cas_bomber = 近距支援机
-	naval_bomber = 海军轰炸机
-	naval_air = 舰载机
-	marine_tech = 海军陆战队
-	para_tech = 伞兵
-	mountaineers_tech = 山地步兵
-	tp_tech = 登陆艇
-#获得国策、决议的条件(是否可以点)代码，可打在民族精神上，若不满足则民族精神消失
+	naval_doctrine = 海军学说
+	strategic_destruction_tree = 战略破坏学说
+	battlefield_support_tree = 战场支援学说
+	operational_integrity_tree = 连续作战学说
+	jet_technology = 喷气式飞机科技
+	trade_interdiction_tree = 贸易阻断学说
+	convoy_defense_tree = 运输护航学说
+	light_fighter = 轻型战斗机型号
+	cat_heavy_fighter = 重型战斗机型号
+	tactical_bomber = 战术轰炸机型号
+	cat_strategic_bomber = 战略轰炸机型号
+	naval_bomber = 海军轰炸机型号
+	cas_bomber = 近距支援机型号
+	ship_modules_tech = 舰艇模块
+    dd_tech = 驱逐舰型号
+    cl_tech = 轻巡洋舰型号
+    ca_tech = 重巡洋舰型号
+    cv_tech = 航空母舰型号
+    bc_tech = 战列巡洋舰型号 
+    bb_tech = 战列舰型号
+    shbb_tech = 超重战列舰型号
+    ss_tech = 潜艇型号
+    tp_tech = 运输船
+	synth_resources = 合成资源
+	fleet_in_being_tree = 存在舰队学说
+	encryption_tech = 编码手段
+	decryption_tech = 解码手段
+	computing_tech = 计算机科技
+	radar_tech = 雷达科技
+	infantry_tech = 步兵科技
+	marine_tech = 海军陆战队科技
+	construction_tech = 建筑科技
+	excavation_tech = 挖掘技术
+	submarine_doctrine = 潜艇行动学说
+	air_equipment = 飞行器
+	cat_mobile_warfare = 机动作战学说
+	cat_superior_firepower = 优势火力学说
+	cat_grand_battle_plan = 决战计划学说
+	cat_mass_assault = 人海突击学说
+	cat_base_strike = 基地打击学说
+	cat_trade_interdiction = 贸易阻断学说
+	cat_fleet_in_being = 存在舰队学说
+	cat_strategic_destruction = 战略破坏学说
+	cat_battlefield_support = 战场支援学说
+	cat_operational_integrity = 连续作战学说
+	night_vision = 夜视仪
+	base_strike_main = 基地打击学说
+	mot_rockets = 自行火箭炮
+	support_tech = 支援科技
+	para_tech = 空降科技
+	engineers_tech = 工兵科技
+	recon_tech = 侦察连
+	mountaineers_tech = 山地步兵科技
+	military_police_tech = 宪兵队科技
+	hospital_tech = 野战医院科技
+	logistics_tech = 后勤连
+	signal_company_tech = 通信连科技
+	maintenance_company_tech = 维修连
+	naval_mines = 水雷战技术
+	concentrated_industry_category = 集中工业技术
+	dispersed_industry_category = 分散工业技术
+	asw_tech = 反潜战科技
+	naval_minesweeping = 海军扫雷科技
+	naval_minelaying = 海军布雷科技
+	cat_scout_plane = 侦察机型号
+	train_tech = 火车科技
+	cat_production = 生产
+	cat_synth_rubber = 合成橡胶
+	cat_synth_oil = 合成油
+	cat_armored_cars = 装甲车
+	cat_special_forces_generic = 特种部队
+	cat_torpedoes = 鱼雷
+    cat_ship_light_battery = 轻型炮组
+    cat_ship_medium_battery =  中型炮组
+    cat_ship_heavy_battery = 重型炮组
+	plane_modules_tech = 飞机模块
+	cat_air_guns = 飞机机枪科技
+	cat_air_engine = 飞机引擎科技
+	cat_air_bombs = 飞机炸弹挂架科技
+	special_forces_doctrine = 特种部队学说
+	cat_maritime_patrol = 海上巡逻机型号
+	cat_mountaineers_doctrine = 特种山地步兵学说
+	cat_marines_doctrine = 特种海军陆战队学说
+	cat_paratroopers_doctrine = 特种空降兵学说
+	naval_armor = 海军装甲
+	naval_artillery = 海军火炮
+	helicopter_tech = 直升机
+	pykrete_tech = 派克瑞特科技
+	transport_planes_cat = 运输机
+    mio_cat_tech_all_armor_and_modules =  所有装甲科技
+    mio_cat_tech_light_armor_and_modules =  轻型装甲科技
+    mio_cat_tech_medium_armor_and_modules =  中型装甲科技
+    mio_cat_tech_heavy_armor_and_modules =  重型装甲科技
+    mio_cat_all_artillery_equipment =  所有火炮科
+    mio_cat_all_light_fighter_and_modules =  所有战斗机科技
+    mio_cat_all_cas_and_modules =  所有近距支援机科技
+    mio_cat_all_naval_bomber_and_modules =  所有海军轰炸机科技
+    mio_cat_all_light_aircraft_and_modules =  所有轻型飞机科技
+    mio_cat_all_medium_aircraft_and_modules =  所有中型飞机科技
+    mio_cat_all_heavy_aircraft_and_modules =  所有重型飞机科技
+    mio_cat_tech_all_capital_ship_and_modules =  所有主力舰科技
+    mio_cat_tech_all_screen_ship_and_modules =  所有屏卫舰科技
+    mio_cat_tech_all_submarine_and_modules =  所有潜艇科技
+    mio_cat_tech_all_carrier_and_modules =  所有航空母舰科技
+    mio_cat_tech_all_cruiser_and_modules =  所有轻巡洋舰科技
+    mio_cat_tech_all_destroyer_and_modules =  所有驱逐舰科技
+    mio_cat_tech_all_motorized_mechanized =  所有摩托化和机械化科技
+	mio_cat_artillery = 所有火炮科技
+#在此声明，此文件只整合了科技种类即technology_tags，并非所有科技。
+
+#进行国策、决议等的前提条件代码。（部分适用于顾问）
+	allowed = {
+		条件（仅开局检测一次）
+	}
+	visible = {
+		条件（实时检测，若条件不满足则不可见）
+	}
 	available = {
+		可见的前提条件
+	}
+	#需要其中之一
+	OR = {
 		条件
 	}
-	
-	#需要其中之一的条件代码(加在available条件中)(事件触发条件也可用)
-	or = {
+	#需要以下全部
+	AND = {
+		条件
+	}
+	#不需要以下条件（即需要以下条件为否）
+	NOT = {
 		条件
 	}
 #跳过国策条件代码
 	bypass = {
 		条件
-	}	
-#决议、内阁是否看得见的代码(随时检测)
-	visible = {
-		条件
-	}
-#决议、内阁是否看得见的代码(仅开局检测)
-	allowed = {
-		条件
 	}
 #条件提示（隐藏条件，显示提示，放在available内）
 	custom_trigger_tooltip = {
-		tooltip = 条件特定提示代码(拿到本地化文件翻译)	
-		条件
+		tooltip = Loc_key #需要本地化
+		直接写条件
 	}
-	
-#条件种类(包括国策的和事件的和决议的)
+#部分条件（常用）
 	is_in_faction_with = 与某国在同一阵营的国家代码
 	has_stability < = 稳定度大于或小于多少
 	has_war_support < 2.0 = 战争支持度大于或小于多少
@@ -200,13 +290,9 @@ centrism = 中间路线
 	has_idea = 民族精神 = 要求拥有民族精神
 	NOT = { has_idea = 民族精神 } = 要求没有民族精神
 	has_tech = 拥有科技
-
-	has = 有（可以试着加在变量前，编出代码，比如 has_manpower > 人力大于多少） #貌似没用
-
 	is_subject_of = 是哪个国家附庸的国家代码
 	has_army_manpower = { size > 兵力人数 } = 陆军现役兵力大于或小于多少 
 	has_deployed_air_force_size = { size > 兵力人数 } = 部署的飞机数量大于或少于多少
-	
 	#tag国家评价至少60#
 	has_opinion = { 
 		target = tag
@@ -217,22 +303,23 @@ centrism = 中间路线
 		focus = 国策代码
 		progress > 进度大于多少
 	}
-	
 	#要求战前控制某省份，且战时控制权在此国家手上代码
 		要求控制的地区代码 = {
 			is_owned_and_controlled_by = 受哪国控制的国家代码 
 		}
-	
-	#某地区控制国条件
+	#某地区控制/拥有国条件
 		地区代码 = {
 			controller = {		
 				条件
 			}
+			#或
+			owner = {
+				条件
+			}
 		}
-	
 	#比较关系
 		available = {
-			要比较的国家(国家代码) = {
+			要比较的国家tag = {
 				has_opinion = {  
 					target = 对谁的关系(国家代码) value > 大于多少
 				}
@@ -241,6 +328,7 @@ centrism = 中间路线
 	#首都位置(可以加入or、NOT等代码)
 		capital_scope = {
 			state = 省份代码
+			其他检测条件
 		}
 #国策、决议代码
 	shared_focus = { 国策内容 } = 共享国策（不需要国策树，直接打）
@@ -325,8 +413,10 @@ centrism = 中间路线
 	remove_unit_leader = 要移除的将领id
 	省份代码 = { set_demilitarized_zone = yes } = 该省份成为非军事区（no为取消）
 	build_railway = { #铺设铁路
-		path = { 9330 3356 6279 6230 6398 6341 413 3527 11475 11412 6591 3540 3519 11459 11450 11434 9417 }
-	                         （铁路沿线地块代码）
+		path = { 
+			9330 3356 6279 6230 6398 6341 413 3527 11475 11412 6591 3540 3519 11459 11450 11434 9417 
+		}
+	    #（铁路沿线地块代码）
 	}
 	#傀儡国#
 	set_autonomy = {
@@ -352,15 +442,13 @@ centrism = 中间路线
  		# autonomy_volkskommissariat = 人民专员辖区
  		# autonomy_eu_member = 欧盟成员国
 	}
-	
-	
 	#规则设定（可到ideologies意识形态文件找种类）
 		set_rule = { 规则种类 = yes 或者 no } = 规则设定格式
 		#规则种类
-			can_create_factions = 规则设定，是否可以创建阵营
-			can_send_volunteers = 规则设定，是否可以派遣志愿军
-			can_declare_war_on_same_ideology = 规则设定，是否可以对同意识形态国家宣战
-			can_only_justify_war_on_threat_country = 规则设定，是否只能对造成紧张度的国家宣战
+		can_create_factions = 规则设定，是否可以创建阵营
+		can_send_volunteers = 规则设定，是否可以派遣志愿军
+		can_declare_war_on_same_ideology = 规则设定，是否可以对同意识形态国家宣战
+		can_only_justify_war_on_threat_country = 规则设定，是否只能对造成紧张度的国家宣战
 	
 	#全体将领增加技能代码
 		every_army_leader = {
@@ -386,19 +474,30 @@ centrism = 中间路线
 			add_to_faction = 要加入的国家代码
 		}
 	#战争类型
-		puppet_wargoal_focus = 傀儡
-		annex_everything = 吞并
-		take_state_focus = 	征服(策略)
 		take_state = 征服
+		take_state_focus = 征服（国策）
+		puppet_wargoal_focus = 傀儡（国策）
 		take_claimed_state = 割让领土
+		take_core_state = 收复核心地区
+		annex_everything = 吞并
+		civil_war = 内战
+		topple_government = 颠覆政权
+		liberate_wargoal = 解放
+		independence_wargoal = 独立
 	#隐藏效果(加在国策效果下面或者事件选项下面)
 		hidden_effect = {
 			
 		}
 	
 	#几率效果代码
-		random_list = { 70 = { add_political_power = 200 } 30 = { add_political_power = -100 } }
-						几率	 		条件				几率			条件
+		random_list = { 
+			70 = {  #倾向
+				add_political_power = 200 #效果
+			} 
+			30 = {  #倾向
+				add_political_power = -100 #效果
+			} 
+		}
 		
 	#替换民族精神(民族精神附加效果)代码
 		swap_ideas = {
@@ -496,7 +595,7 @@ centrism = 中间路线
 				province = 小地块代码
 				# 或
 				province = {
-					id = province.id #小地块id
+					id = province.id #小地块id（用于批量添加）
 					all_provinces = yes/no #该省份的所有小地块
 					limit_to_coastal = yes/no #只在海岸边
 					limit_to_naval_base = yes/no #只在海军基地
@@ -580,8 +679,18 @@ centrism = 中间路线
 	air_chief_cost_factor = 空军部长花费
 	high_command_cost_factor = 总司令花费
 	research_speed_factor = 研究速度 #科研速度
-	local_resources_factor = 战略资源获取率
-	PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR = 缺乏战略资源惩罚
+	#原版Resource有以下oil、aluminium、rubber、tungsten、steel、chromium
+	state_resource_<Resource> = 地区资源增加
+	state_resource_cost_<Resource> = 地区资源消耗
+	state_resources_<Resource>_factor = 地区资源增加率
+	state_resources_factor = 当地可用资源
+	temporary_state_resource_<Resource> = 额外地区资源增加
+	production_lack_of_resource_penalty_factor = 缺乏战略资源惩罚
+	local_resources_factor = 地区战略资源获取率 #可以在国家域中使用,也可以用于地区域
+	local_resources = 地区战略资源获取 #可以在国家域中使用,也可以用于地区域
+	country_resource_<Resource> = 国家资源增加
+	country_resource_cost_<Resource> = 国家资源消耗
+	resource_trade_cost_bonus_per_factory = 每座工厂交易额外资源
 	autonomy_gain = 自治度每日增加(加多少打多少)
 	民主 = democratic  法西斯 = fascism  共产主义 = communism  中立 = neutrality
 	意识形态种类_drift = 意识形态每日增加(加多少打多少)
@@ -604,8 +713,8 @@ centrism = 中间路线
 	political_power_gain = 每日政治点增加（0.1=每天加0.1）
 	political_power_cost = 每日政治点消耗（同上）
 	stability_factor = 稳定度
-	stability_weekly = 每周稳定度增长
-	# 注意：stability_weekly_factor大概率是弃用了或者一开始就不生效，若要使用请翻看原版案例。
+	stability_weekly = 每周稳定度
+	stability_weekly_factor = 每周稳定度增长
 	defensive_war_stability_factor = 战争防御对稳定度修正
 	offensive_war_stability_factor = 侵略战争对稳定度修正
 	war_support_factor = 战争支持度
@@ -671,7 +780,7 @@ centrism = 中间路线
 	army_bonus_air_superiority_factor = 陆军空优
 	planning_speed = 计划速度
 	max_planning = 计划加成上限
-	MAX_PLANNING_FACTOR = 计划加成上限系数
+	max_planning_factor = 计划加成上限系数
 	max_dig_in_factor = 堑壕上限系数
 	max_dig_in = 堑壕上限
 	experience_loss_factor = 有经验的士兵损失
@@ -726,6 +835,13 @@ centrism = 中间路线
 #添加规则设定（直接打不用加在modifier下面）
 	rule = { 规则种类（可打多个） = yes 或 no }
 	
+#检测船的数量
+
+has_navy_size = {
+	unit = 船的类型
+	size > 9
+}
+
 #针对某种武器的加成(直接打不用加在modifier下面)
 	equipment_bonus = {
 		装备种类 = {
@@ -733,90 +849,310 @@ centrism = 中间路线
 			instant = yes
 		}
 	}
-	has_navy_size = {
-		unit = battleship
-		unit = battle_cruiser
-		unit = carrier
-		unit = destroyer
-		unit = heavy_cruiser
-		
-		type = submarine
-		type = screen_ship
-		type = capital_ship
+#装备种类
+amphibious_mechanized_equipment = 两栖登陆载具
+amphibious_mechanized_equipment_1
+amphibious_mechanized_equipment_2
 
-		size > 9
-	}
-	
-	
-	submarine
-    screen_ship
-    capital_ship
-    carrier
-	#武器代码	
-		fighter_equipment = 战斗机
-		cv_fighter_equipment = 舰载战斗机
-		strat_bomber_equipment = 战略轰炸机
-		tac_bomber_equipment = 战术轰炸机
-		nav_bomber_equipment = 海军轰炸机
-		CAS_equipment = 近距离支援机
-		cv_CAS_equipment = 舰载近距离支援机	
-	#加成代码
-		air_bombing = 战略轰炸
-		air_range = 作战半径
-		reliability = 可靠性
-		air_ground_attack = 空军对地攻击
-		naval_strike_attack = 空军对海攻击
-		
-		lg_attack = 海军轻火炮
-		hg_attack = 海军重火炮
-		armor_value = 装甲厚度
-		maximum_speed = 最大速度
-		naval_range = 海军航程
-		carrier_size = 机库容量
-		
-		defense = 防御
-		breakthrough = 突破
-		hardness = 韧
-		soft_attack = 对人员杀伤
-		hard_attack = 对装甲杀伤
-		ap_attack = 穿甲深度
-		air_attack = 对空攻击
-				
+anti_air_equipment = 牵引式防空炮
+anti_air_equipment_1
+anti_air_equipment_2
+anti_air_equipment_3
+
+anti_tank_equipment = 牵引式反坦克炮
+anti_tank_equipment_1
+anti_tank_equipment_2
+anti_tank_equipment_3
+
+armored_car_equipment = 装甲车
+gw_armored_car_equipment = 战间期装甲车
+armored_car_equipment_1
+armored_car_equipment_2
+armored_car_at_equipment = 反坦克装甲车
+
+artillery_equipment = 牵引式火炮
+artillery_equipment_1
+artillery_equipment_2
+artillery_equipment_3
+rocket_artillery_equipment = 牵引式火箭炮
+rocket_artillery_equipment_1
+rocket_artillery_equipment_2
+motorized_rocket_equipment = 自行火箭炮
+motorized_rocket_equipment_1
+
+convoy = 运输船
+convoy_1
+
+floating_harbor_equipment = 浮动港口
+floating_harbor_equipment_1
+
+guided_missile_equipment = 制导导弹
+guided_missile_equipment_1
+guided_missile_equipment_2
+guided_missile_equipment_3
+
+infantry_equipment = 步兵装备
+infantry_equipment_0
+infantry_equipment_1
+infantry_equipment_2
+infantry_equipment_3
+
+mechanized_equipment = 机械化装备
+mechanized_equipment_1
+mechanized_equipment_2
+mechanized_equipment_3
+
+motorized_equipment = 卡车
+motorized_equipment_0
+motorized_equipment_1
+
+#轻型机身
+small_plane_airframe = 战斗机 
+small_plane_airframe_0
+small_plane_airframe_1
+small_plane_airframe_2
+small_plane_airframe_3
+small_plane_airframe_4
+cv_small_plane_airframe = 舰载战斗机 
+cv_small_plane_airframe_0
+cv_small_plane_airframe_1
+cv_small_plane_airframe_2
+cv_small_plane_airframe_3
+cv_small_plane_airframe_4
+small_plane_cas_airframe = 近距支援机
+cv_small_plane_cas_airframe = 舰载近距支援机
+small_plane_naval_bomber_airframe = 海军轰炸机
+cv_small_plane_naval_bomber_airframe = 舰载海军轰炸机
+small_plane_suicide_airframe = 自杀式飞行器
+cv_small_plane_suicide_airframe = 舰载自杀式飞行器
+jet_fighter_equipment = 喷气式战斗机
+rocket_interceptor_equipment = 火箭动力截击机
+#中型机身
+medium_plane_airframe = 战术轰炸机
+medium_plane_airframe_0
+medium_plane_airframe_1
+medium_plane_airframe_2
+medium_plane_airframe_3
+medium_plane_airframe_4
+medium_plane_fighter_airframe = 重型战斗机
+medium_plane_scout_plane_airframe = 侦察机
+jet_tac_bomber_equipment = 喷气式战术轰炸机
+#重型机身
+large_plane_airframe = 战略轰炸机
+large_plane_airframe_0
+large_plane_airframe_1
+large_plane_airframe_2
+large_plane_airframe_3
+large_plane_airframe_4
+large_plane_maritime_patrol_plane_airframe = 海军巡逻轰炸机
+jet_strat_bomber_equipment = 喷气式战略轰炸机
+
+transport_plane_equipment = 运输机
+transport_plane_equipment_1
+transport_plane_equipment_2
+transport_plane_equipment_3
+
+railway_gun_equipment = 列车炮
+railway_gun_equipment_1
+
+ship_hull_carrier = 航空母舰 
+ship_hull_carrier_1
+ship_hull_carrier_2
+ship_hull_carrier_3
+ship_hull_carrier_conversion_bb = 改装战列舰船体
+ship_hull_carrier_conversion_ca = 改装巡洋舰船体
+ship_hull_cruiser = 巡洋舰
+ship_hull_cruiser_1
+ship_hull_cruiser_2
+ship_hull_cruiser_3
+ship_hull_cruiser_4
+light_cruiser_1 = 轻巡洋舰I型
+light_cruiser_2
+light_cruiser_3
+light_cruiser_4
+heavy_cruiser_1 = 重巡洋舰I型
+heavy_cruiser_2
+heavy_cruiser_3
+heavy_cruiser_4
+
+torpedo_cruiser = 重雷装巡洋舰 #原版日本特有
+ship_hull_torpedo_cruiser = 重雷装巡洋舰
+ship_hull_cruiser_panzerschiff = 装甲舰
+ship_hull_cruiser_coastal_defense_ship = 岸防舰
+
+ship_hull_heavy = 重型战舰
+ship_hull_heavy_1
+ship_hull_heavy_2
+ship_hull_heavy_3
+ship_hull_heavy_4
+ship_hull_pre_dreadnought = 前无畏舰船体
+ship_hull_super_heavy_1 = 超重型战舰船体
+battleship_1 = 战列舰I型
+battleship_2
+battleship_3
+battleship_4
+SH_battleship_1 = 超重战列舰I型
+SH_battleship_2
+battle_cruiser_1 = 战列巡洋舰I型
+battle_cruiser_2
+battle_cruiser_3
+battle_cruiser_4
+
+ship_hull_light = 轻型船体
+ship_hull_light_1
+ship_hull_light_2
+ship_hull_light_3
+ship_hull_light_4
+destroyer_1 = 驱逐舰I型
+destroyer_2
+destroyer_3
+destroyer_4
+
+ship_hull_submarine = 潜艇
+ship_hull_submarine_1
+ship_hull_submarine_2
+ship_hull_submarine_3
+ship_hull_submarine_4
+ship_hull_cruiser_submarine = 巡洋潜艇
+ship_hull_midget_submarine = 袖珍潜艇
+submarine_1 = 潜艇I型
+submarine_2
+submarine_3
+submarine_4
+
+support_equipment = 支援装备
+support_equipment_1
+
+light_tank_chassis = 轻型坦克
+light_tank_chassis_0
+light_tank_chassis_1
+light_tank_chassis_2
+light_tank_chassis_3
+light_tank_aa_chassis = 轻型自行防空炮
+light_tank_artillery_chassis = 轻型自行火炮
+light_tank_destroyer_chassis = 轻型自行反坦克炮
+light_tank_amphibious_chassis = 轻型两栖坦克
+light_tank_flame_chassis = 轻型喷火坦克
+
+medium_tank_chassis = 中型坦克
+medium_tank_chassis_0
+medium_tank_chassis_1
+medium_tank_chassis_2
+medium_tank_chassis_3
+medium_tank_aa_chassis = 中型自行防空炮
+medium_tank_artillery_chassis = 中型自行火炮
+medium_tank_destroyer_chassis = 中型反坦克炮
+medium_tank_amphibious_chassis = 中型两栖坦克
+medium_tank_flame_chassis = 中型喷火坦克
+
+heavy_tank_chassis = 重型坦克
+heavy_tank_chassis_0
+heavy_tank_chassis_1
+heavy_tank_chassis_2
+heavy_tank_chassis_3
+heavy_tank_aa_chassis = 重型自行防空炮
+heavy_tank_artillery_chassis = 重型自行火炮
+heavy_tank_destroyer_chassis = 重型反坦克炮
+heavy_tank_amphibious_chassis = 重型两栖坦克
+heavy_tank_flame_chassis = 重型喷火坦克
+
+super_heavy_tank_chassis = 超重型坦克底盘
+super_heavy_tank_chassis_1
+super_heavy_tank_aa_chassis = 超重型自行防空炮
+super_heavy_tank_artillery_chassis = 超重型自行火炮
+super_heavy_tank_destroyer_chassis = 超重型反坦克炮
+
+modern_tank_chassis = 现代坦克底盘
+modern_tank_chassis_1  
+modern_tank_aa_chassis = 现代自行防空炮
+modern_tank_artillery_chassis = 现代自行火炮
+modern_tank_destroyer_chassis = 现代反坦克炮
+
+amphibious_tank_chassis = 两栖坦克底盘
+amphibious_tank_chassis_1
+
+train_equipment = 火车
+train_equipment_1 = 民用火车
+train_equipment_2 = 战备简化型火车
+train_equipment_3 = 装甲火车
+#注：这是我toa时期制作的合集，会有遗漏。————by hutao.
+### 修正词条 ###
+## 所有 ##
+lend_lease_cost = 运输船占用空间
+build_cost_ic = 生产成本
+manpower = 生产人力成本
+can_license = 是否可以获得许可
+is_convertable = 是否可以改装
+instant = yes #立刻生效
+
+## 陆地 ##
+# 基本 #
+reliability = 可靠性
+maximum_speed = 最高速度
+# 进攻 #
+soft_attack = 软攻
+hard_attack = 硬攻
+air_attack = 对空攻击
+ap_attack = 穿甲深度
+breakthrough = 突破
+# 防御 #
+defense = 防御
+max_strength = HP
+armor_value = 装甲率
+hardness = 装甲厚度
+entrenchment = 堑壕
+# 特殊 #
+recon = 侦察
+
+## 海军专用 ##
+naval_speed = 最大速度
+lg_armor_piercing = 轻炮穿甲
+lg_attack = 轻炮攻击
+hg_armor_piercing = 重炮穿甲
+hg_attack = 重炮攻击
+torpedo_attack = 鱼雷攻击
+anti_air_attack = 对空攻击
+shore_bombardment = 对岸炮击
+surface_detection = 水面侦察
+sub_attack = 反潜攻击
+sub_detection = 对潜侦测
+surface_visibility = 水面能见度
+sub_visibility = 潜艇能见度
+naval_range = 海军航程
+port_capacity_usage = 港口容量使用 #船舶在港口需要多少空间
+search_and_destroy_coordination = 搜索并歼灭 #当执行搜索并歼灭任务时，发现目标后集结舰队的速度
+convoy_raiding_coordination = 应该是护航效率
+
+## 空军专用 ##
+air_attack = 对空攻击
+air_defence = 对空防御
+air_range = 最大航程
+air_agility = 机动
+air_ground_attack = 对地攻击
+air_bombing = 战略轰炸 
+air_superiority = 空优 
+naval_strike_attack = 对海攻击
+naval_strike_targetting = 对海瞄准
+carrier_size = 搭载量
+default_carrier_composition_weight = 默认载体组成重量 #注：机翻 
+carrier_capable = 可在制造商中使用 #仅限飞机制造商
+
 #对某国战斗修正(直接打不用加在modifier下面)
 	targeted_modifier = {
 		tag = 对哪个国家的战斗修正
-		#战斗修正种类
-		attack_bonus_against = 攻击修正
-		defense_bonus_against = 防御修正
-		trade_cost_for_target_factor = 0.5
+		#修正列表
+		extra_trade_to_target_factor = 为指定国家增加额外的可贸易资源。
+		generate_wargoal_tension_against = 针对指定国家制造战争目标的紧张度限制
+		cic_to_target_factor = 将我国部分民用工厂交给指定国家
+		mic_to_target_factor = 将我国部分军用工业交给指定国家
+		trade_cost_for_target_factor = 指定国家购买我国资源的花费
+		targeted_legitimacy_daily = 更改指定国家的合法性每日收益
+		attack_bonus_against = 对指定国家的军队提供攻击加成
+		attack_bonus_against_cores = 对其核心领土上指定国家的军队提供攻击加成
+		breakthrough_bonus_against = 对指定国家的军队提供突破加成
+		defense_bonus_against = 对指定国家的军队提供防御加成
 	}
-	
-	
-#建造花费代码(直接打不用加在modifier下面)
-	equipment_bonus = {
-		装备种类 = {
-			build_cost_ic = 建造花费
-			instant = yes
-		}
-	}
-	#装备种类
-		infantry_equipment = 步兵武器(步枪)
-		support_equipment = 支援装备
-		artillery_equipment = 火炮
-		light_tank_equipment = 轻型坦克
-		medium_tank_equipment = 中型坦克
-		heavy_tank_equipment = 重型坦克
-		super_heavy_tank_equipment = 超重坦克
-		modern_tank_equipment = 现代坦克
-		category_all_armor = 装甲变种（无用）
-		armor = 装甲
-		motorized_equipment = 摩托化装备
-		mechanized_equipment = 机械化装备
-		fighter_equipment = 战斗机
-		CAS_equipment = 近距支援机
 		
-#定义内阁小黑图标代码(加在特性里面)
-	sprite = 数字 = 决定特性(显示在内阁下面的小黑图标)的黑色小图标是哪一个，具体去知乎看
 
 #国策、内阁、决议AI选择倾向
 	ai_will_do = {
@@ -1380,6 +1716,13 @@ division_template = {
 		inshore_fighter = 近海战士
 		blue_water_expert = 蓝水海军专家
 		green_water_expert = 绿水海军专家
+
+
+
+
+
+
+#不完全统计修改人员：mugi（2918755276）、胡桃（1803770293）
 		
 	
 	

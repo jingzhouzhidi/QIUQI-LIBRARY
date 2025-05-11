@@ -4,7 +4,7 @@
 
 ![logo](./image/logo.jpg)
 
-**首先，欢迎各位MOD界的同志们使用【秋起图书馆】（霜泽图书馆）！**
+**首先，欢迎各位MOD界的同志们使用秋起图书馆（霜泽图书馆）！**
 
 ## 内容介绍
 
@@ -87,7 +87,11 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
 |[红与白：炼铸钢铁的人们](https://steamcommunity.com/sharedfiles/filedetails/?id=3429688914)制作组 | [灵钢协奏曲](https://steamcommunity.com/sharedfiles/filedetails/?id=2860967305)(SPC)制作组 | [最美好的小祥](https://steamcommunity.com/sharedfiles/filedetails/?id=3340670106)模组 |
 | [The Sakiko Rises](https://steamcommunity.com/sharedfiles/filedetails/?id=3452890784)(TSR)制作组| [新秩序：铁杵成针](https://steamcommunity.com/sharedfiles/filedetails/?id=3438313516)(TNO:IPN)制作组 | [新秩序：德意志社会主义共和国](https://steamcommunity.com/sharedfiles/filedetails/?id=3222941019)(TNO:DSR)制作组|
 |[英国国策重置](https://steamcommunity.com/sharedfiles/filedetails/?id=3353818187)模组|[KX部分国家微调](https://steamcommunity.com/sharedfiles/filedetails/?id=3244364529)(KXX)模组| [碧蓝航线](https://steamcommunity.com/sharedfiles/filedetails/?id=2249768662)模组|
-|万摸殿制作组(辖[碧蓝档案将领包](https://steamcommunity.com/sharedfiles/filedetails/?id=2887728297)＆碧蓝档案：自始复新)|The Fire Redux(烈焰升腾重置、TFX)制作组|[蔚蓝新世界(ANW)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=3114407695)|
+|万摸殿制作组(辖[碧蓝档案将领包](https://steamcommunity.com/sharedfiles/filedetails/?id=2887728297)＆碧蓝档案：自始复新)|[The Fire Redux](https://steamcommunity.com/sharedfiles/filedetails/?id=3458558897)(TFX)制作组|[蔚蓝新世界(ANW)制作组](https://steamcommunity.com/sharedfiles/filedetails/?id=3114407695)|
+|[烈焰升腾：潜龙腾渊](https://steamcommunity.com/sharedfiles/filedetails/?id=3352637469)(TFR:LRD)制作组|[烈焰升腾：红龙世纪](https://steamcommunity.com/sharedfiles/filedetails/?id=3387695900)(TFR:ARD)制作组|烈焰升腾：红色黎明制作组|
+|[烈焰升腾：最美好的中国](https://steamcommunity.com/sharedfiles/filedetails/?id=3412237232)模组|[德国国策扩展：黄粱一梦](https://steamcommunity.com/sharedfiles/filedetails/?id=3308201627)模组|新秩序：离乡甚远(TNO:SFFH)制作组|
+|冷战：热斗(CW:HS)制作组|[日月不落](https://steamcommunity.com/sharedfiles/filedetails/?id=2917842100)模组|[英式和平：自由或死亡](https://steamcommunity.com/sharedfiles/filedetails/?id=3071559334)(PB:LOM)制作组|
+|东方乱世录：幻想终末(THW)制作组|||
 
 ### 鸣谢
 
@@ -140,7 +144,8 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
 - Apolynoid - 提供自定义制造商的修改模板
 - 康米斯特(烈焰升腾:潜龙腾渊组) - 提供其撰写代码教程合集
 - 墨合 - 收录其代码工具
-- 逻各斯(AOR组) - 收录其代码军队历史命名模板
+- 逻各斯 - 收录其代码军队历史命名模板
+- Anarchism - 提供曲线Shader使用教程
 
 >如因失误，未能将您的的名字（贡献者）添加至鸣谢者栏列当中，请到图书馆内联系我们！还望海涵，感谢！
 
@@ -148,7 +153,7 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
 ![qq](./image/qq.png)
 秋起.
 
-2025.3.30
+2025.5.11
 
 ---
 

@@ -110,6 +110,7 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
   墨合 - 收录其代码工具
   逻各斯 - 收录其代码军队历史命名模板
   Anarchism - 提供曲线Shader使用教程
+  南宫萧 - 提供shader制作教程
   
 #如因失误，未能将您的的名字（贡献者）添加至鸣谢者栏列当中，请到图书馆内联系我们！还望海涵，感谢！
 

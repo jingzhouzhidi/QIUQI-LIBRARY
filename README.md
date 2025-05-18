@@ -91,7 +91,7 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
 |[烈焰升腾：潜龙腾渊](https://steamcommunity.com/sharedfiles/filedetails/?id=3352637469)(TFR:LRD)制作组|[烈焰升腾：红龙世纪](https://steamcommunity.com/sharedfiles/filedetails/?id=3387695900)(TFR:ARD)制作组|烈焰升腾：红色黎明制作组|
 |[烈焰升腾：最美好的中国](https://steamcommunity.com/sharedfiles/filedetails/?id=3412237232)模组|[德国国策扩展：黄粱一梦](https://steamcommunity.com/sharedfiles/filedetails/?id=3308201627)模组|新秩序：离乡甚远(TNO:SFFH)制作组|
 |冷战：热斗(CW:HS)制作组|[日月不落](https://steamcommunity.com/sharedfiles/filedetails/?id=2917842100)模组|[英式和平：自由或死亡](https://steamcommunity.com/sharedfiles/filedetails/?id=3071559334)(PB:LOM)制作组|
-|东方乱世录：幻想终末(THW)制作组|||
+|东方乱世录：幻想终末(THW)制作组|钢铁雄心4萌新社||
 
 ### 鸣谢
 
@@ -147,6 +147,7 @@ Shuuangze Library - 霜泽图书馆(Discord区) ：https://discord.gg/7mxG9eMJx6
 - 逻各斯 - 收录其代码军队历史命名模板
 - Anarchism - 提供曲线Shader使用教程
 - 南宫萧 - 提供shader制作教程
+- 59战车 - 提供模型制作系列教程
 
 >如因失误，未能将您的的名字（贡献者）添加至鸣谢者栏列当中，请到图书馆内联系我们！还望海涵，感谢！
 

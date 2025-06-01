@@ -2,13 +2,16 @@
 #当前版本自定义制造商储存在common中的military_industrial_organization文件中
 #内置有俩种文件
 #在游戏的所有三个目录中，您都可以找到一个“documentation.info”文本文件，其中描述了作者的一些想法和一些指导。（引用自wiki）
+#所有用于initial_trait的修正都可以用于trait
 
 第五次修订：Apolynoid
 第六次修订：秋起.
+第七次修订：Phoebe
 
 #policies————————具体的制造商政策
 mio_policy_air_perfect_finish = { #修订：政策token  #政策存放在/Hearts of Iron IV/common/military_industrial_organization/policies/文件夹中
 	icon = GFX_mio_policy_perfect_finish #政策图标
+    
 	allowed = { #可用条件，MIO作用域，仅开局检测
 	}
 	visible = { #可见的条件（随时监测）
@@ -103,6 +106,13 @@ AST_cockatoo_doe_organization = {
 		token = generic_mio_trait_crew_ergonomics #特质token
 		name = generic_mio_trait_crew_ergonomics  #特质name（一般和token相同）
 		icon = GFX_generic_mio_trait_icon_maximum_speed #特质图标
+        #*#*#原版特质图标存放在/Hearts of Iron IV/gfx/interface/military_industrial_organization/department_icons或trait_icons中
+        #*#*#引用格式为GFX_文件名（不带.dds格式），例：图片generic_mio_department_icon_air_transport.dds引用格式为GFX_generic_mio_department_icon_air_transport
+
+        #*#*#
+        available = { #特质点可以使用的条件
+            has_mio_size > n #MIO的规模大于n，即点了几个特质点后才解锁这个点
+        }
 
 
 		#类比国策的连线
@@ -125,6 +135,12 @@ AST_cockatoo_doe_organization = {
 		}
 		production_bonus ={#对生产线的加成
 		}
+
+        #*#*#
+        organization_modifier = {
+            #特质点对MIO自身的修正
+        }
+
 		limit_to_equipment_type = {#缩小特质所指范围的条件
 		}
 		on_complete = {
@@ -160,6 +176,11 @@ mio_cat_eq_only_light_fighter = {#制造商装备种类名称
 	}
 }
 
+#*#*#
+在equipment_groups文件夹中可以自行设定新的equipment_groups（装备种类）
+如无对自定义装备种类的本地化命名，游戏内自定义装备种类将显示为 包含的装备1,包含的装备2……
+对自定义装备种类的图标定义格式为 GFX_自定义装备种类代码
+具体的装备细分类型可以在common/units/equipment中查阅
 
 ########################
 车车喵的修改数据
@@ -384,4 +405,103 @@ military_industrial_organization_task_capacity=军工组织任务能力
 military_industrial_organization_size_up_requirement = 修订：军工组织升级资金需求
 military_industrial_organization_funds_gain = 军工组织资金收益
 
-
+#*#*#
+特殊项目（装备代码带有“/”的，符号前为拥有对应设计dlc的代码，符号后为未拥有对应设计dlc的代码）
+#########################
+海军特殊项目全部可被原版MIO加成，即航母MIO可加成冰航母、现代航母，战列舰/主力舰MIO可加成超重战列舰、现代战列舰，以此类推
+巡洋潜艇 = ship_hull_cruiser_submarine/cruiser_submarine
+舰队潜艇 = ship_hull_fleet_submarine/fleet_submarine
+核潜艇 = ship_hull_nuclear_submarine/nuclear_submarine
+迷你潜艇 = ship_hull_midget_submarine/midget_submarine
+重雷装巡洋舰= ship_hull_torpedo_cruiser/torpedo_cruiser	
+超重战列舰 = ship_hull_super_heavy_1/SH_battleship_1
+现代战列舰 = ship_hull_heavy_modern/modern_battleship
+冰航母= ship_hull_mega_carrier/mega_carrier
+现代航母 = ship_hull_carrier_modern/modern_carrier
+#########################
+陆军特殊项目
+#*#*#
+陆巡 = land_cruiser_chassis/land_cruiser_equipment
+build_cost_ic = 生产费用
+maximum_speed = 最大速度
+armor_value = 装甲厚度
+reliability = 可靠性
+fuel_consumption = 油耗
+defense = 防御
+breakthrough = 突破
+soft_attack = 软攻
+hard_attack = 硬攻
+ap_attack = 穿甲
+hardness = 装甲率
+#*#*#
+装甲支援车 = armored_support_vehicle
+armor_value = 装甲厚度
+fuel_consumption = 油耗
+maximum_speed = 最大速度
+reliability = 可靠性
+build_cost_ic = 生产费用
+defense = 防御
+breakthrough = 突破
+hardness = 装甲率
+soft_attack = 软攻
+hard_attack = 硬攻
+#*#*#
+超重型列车炮 = super_heavy_railway_gun_equipment
+与列车炮相同
+#*#*#
+超重型榴弹炮 = super_heavy_artillery_equipment
+defense = 防御
+breakthrough = 突破
+armor_value = 装甲厚度
+soft_attack = 软攻
+hard_attack = 硬攻
+ap_attack = 穿甲
+air_attack = 对空攻击
+build_cost_ic = 生产费用
+reliability = 可靠性
+#*#*#
+超重自行榴弹炮 = self_propelled_super_heavy_artillery_equipment
+soft_attack = 软攻
+hard_attack = 硬攻
+armor_value = 装甲厚度
+defense = 防御
+breakthrough = 突破
+reliability = 可靠性
+maximum_speed = 最大速度
+fuel_consumption = 油耗
+build_cost_ic = 生产费用
+#########################
+空军特殊项目
+飞机类的特殊项目可以直接应用同规格机身的equipment_bonus，如空天母舰、洲际轰炸机可直接应用作用于大型机身的MIO。
+空天母舰 = mothership_equipment_0
+洲际轰炸机 = strat_bomber_intercontinental_equipment_1
+超音速喷气机 = small_plane_airframe_5/supersonic_fighter_equipment_1 
+#*#*#
+直升机 = helicopter_equipment
+maximum_speed = 最大速度
+reliability = 可靠性
+build_cost_ic = 生产费用
+hardness = 装甲率
+armor_value = 装甲厚度
+defense = 防御
+breakthrough = 突破
+ap_attack = 穿甲
+fuel_consumption = 油耗
+#*#*#
+导弹
+guided_missile_equipment = 制导导弹（基础、改进、先进）
+ballistic_missile_equipment = 弹道导弹（基础、中程、洲际）
+nuclear_missile_equipment = 核导弹（基础、中程、洲际）
+sam_missile_equipment = 地对空导弹
+所有导弹适用（包括飞行炸弹、核导弹）
+air_range = 航程
+build_cost_ic = 生产费用
+reliability = 可靠性
+air_agility = 机动
+naval_strike_attack = 对海攻击
+naval_strike_targetting = 对海瞄准
+maximum_speed = 最高速度
+仅限防空导弹
+air_attack = 对空攻击
+除了防空导弹
+air_bombing = 战略轰炸
